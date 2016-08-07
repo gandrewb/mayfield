@@ -1,0 +1,190 @@
+.audio_player {
+	$divider-color: rgba(133, 15, 23, .15);
+	
+	@include floating-box;
+	display: flex;
+	overflow: hidden;
+	min-height: 10em;
+	
+	.playlists,
+	.songs {
+		width: 50%;
+	}
+	li {
+		position: relative;
+		padding: .4em 1em .5em;
+		border-bottom: solid 1px $divider-color;
+		
+		span {
+			display: inline-block;
+			width: calc(100% - 3em);
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+		
+		&.selected,
+		&.playing {
+			color: $mayfield-red;
+			font-weight: 400;
+			
+			&:after {
+				color: $mayfield-red;
+			}
+		}
+			
+		&.selected {
+			&:hover {
+				cursor: default;
+			}
+		}
+		
+		&:hover {
+			cursor: pointer;
+		}
+		
+		&:last-of-type {
+			border-bottom: none;
+		}
+		
+		&:after {
+			float: right;
+			color: #777;
+		}
+	}
+	
+	@include viewport(xs, s){
+		flex-direction: column;
+		
+		.playlists,
+		.songs {
+			width: 100%;
+		}
+	}
+	
+	
+	.playlists {
+		border-right: solid 1px $divider-color;
+		background: 
+			url("../imgs/two_singers_4.svg") 15% bottom/40% no-repeat,
+			linear-gradient(rgba(133, 15, 23, 0) 70%, rgba(133, 15, 23, 0.15) 100%);
+		
+		li {
+			@include icon(chevron_right, after);
+		}
+		
+		@include viewport(xs, s){
+			background: $mayfield-red;
+			border-right: none;
+			white-space: nowrap;
+			overflow: scroll;
+			
+			li {
+				display: inline-block;
+				border-bottom: none;
+				color: rgba(255, 255, 255, .7);
+				
+				span {
+					width: auto;
+				}
+				&:after {
+					float: none;
+					margin-left: .5em;
+					color: rgba(255, 255, 255, .7);
+				}
+				&.selected {
+					color: white;
+					&:after {
+						color: white;
+					}
+				}
+			}
+		}
+	}
+	
+	.songs {
+		position: relative;
+		
+		.playlist {
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 1;
+			width: 100%;
+			
+			&:not(.selected) {
+				animation: fade-back 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+			}
+			
+			&.selected {
+				z-index: 10;
+				position: relative;
+				
+				li {
+					transform: translateX(100%);
+					animation: slide-in .5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+					@for $i from 1 through 50 {
+						&:nth-of-type(#{$i}) {
+							animation-delay: .05s * ($i - 1);
+						}
+					} 
+				}
+			}
+			&:first-of-type {
+				margin-left: 0;
+			}
+		}
+		
+		li {
+			@include icon(play, after);
+			background-color: hsla(0, 0%, 100%, .7);
+
+			&:after {
+				font-size: .75em;
+				line-height: 2.1;
+			}
+			
+			.progress_bar {
+				display: none;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				height: 3px;
+				background-color: $mayfield-red;
+			}
+			
+			&.playing {
+				@include icon(pause, after);
+				
+				&.paused {
+					@include icon(play, after);
+				}
+				
+				.progress_bar {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+@keyframes slide-in {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+@keyframes fade-back {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(.8);
+		opacity: 0;
+	}
+	
+}

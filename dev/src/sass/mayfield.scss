@@ -1,0 +1,336 @@
+@import 'includes/fonts';
+@import 'includes/settings';
+@import 'includes/responsive';
+@import 'includes/utilities';
+@import 'includes/grid';
+@import 'includes/element-base';
+@import 'includes/music-player';
+
+
+.section-intro {
+	position: relative;
+	text-align: center;
+	background-color: hsl(356, 60%, 10%);
+	
+	h1 {
+		position: absolute;
+		text-indent: -9999px;
+	}
+	
+	.hero_backdrop {
+		position: absolute;
+		top: 0; right: 0; bottom: 0; left: 0;
+		background-image: url('../imgs/notation_backdrop.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		-webkit-filter: blur(5px);
+		filter: blur(5px);
+	}
+	
+	.mayfield_logo {
+		position: relative;
+		max-width: 33%;
+		margin: 12% 0;
+	}
+	
+	@include viewport(xs){
+		.hero_backdrop {
+			background-size: 160%;
+		}
+		.mayfield_logo {
+			max-width: 45%;
+		}
+	}
+}
+
+.section-our-story {
+	.content {
+		@include column_parent;
+		flex-wrap: nowrap;
+		
+		@include viewport(xs, s){
+			display: block;
+		}
+	}
+	
+	.about-us { 
+		@include column(2, 3, gutter(l));
+		padding-right: gutter(l);
+		
+		@include viewport(m){
+			@include column(2, 3, gutter(m));
+			padding-right: gutter(m);
+		}
+		@include viewport(xs, s){
+			padding-right: 0;
+		}
+	}
+	
+	
+	
+	.icon-twitter {
+		@include icon(twitter, before);
+		
+		&:before {
+			font-size: .9em;
+			line-height: 2.4;
+		}
+	}
+	.icon-facebook {
+		@include icon(facebook, before);
+	}
+	.icon-soundcloud { 
+		@include icon(soundcloud, before);
+		
+		&:before {
+			font-size: 1.1em;
+			line-height: 1.8;
+		}
+	}
+	.icon-instagram { 
+		@include icon(instagram, before);
+		
+		&:before {
+			font-size: .9em;
+			line-height: 2.4;
+		}
+	}
+	
+	.contributions-widget { 
+		@include floating-box;
+		padding: gutter(l); 
+		
+		p {
+			font-size: .85em;
+			font-weight: 400;
+			margin-bottom: .5em;
+		}
+		
+		form {
+			span {
+				display: inline-block;
+				width: 100%;
+				border-bottom: solid 1px $mayfield-red;
+				color: $mayfield-red;
+				font-size: 1.3em;
+				margin: .25em 0 .4em;
+			}
+			input[type=text] {
+				margin: .12em 0 0 .1em;
+				width: 85%;
+			}
+		}
+		
+		@include viewport(m){
+			padding: gutter(m);
+		}
+		@include viewport(xs, s){
+			padding: gutter(s);
+			margin-top: 2em;
+		}
+	}
+}
+
+.section-events {
+	background: linear-gradient($darker-red, $mayfield-red);
+	color: white;
+	
+	.content {
+		padding-bottom: 10px;
+	}
+	
+	h3 {
+		margin-bottom: 0em;
+	}
+	
+	time {
+		font-size: .85em;
+		line-height: 1;
+	}
+	p {
+		margin-top: 1.25em;
+	}
+	
+	.event_pane {
+		@include column_parent;
+		
+		@include viewport(xs){
+			display: block;
+			
+			.event {
+				padding-right: 0;
+				border-right: none;
+			}
+		}
+	}
+	
+	.event {
+		
+		@include column(1, 3, gutter(l));
+		
+		border-right: solid 1px hsla(0, 0%, 0%, .2);
+		margin-bottom: 65px;
+		padding: 0 gutter(l) 1.25em 0;
+		
+		@include viewport(m){
+			@include column(1, 2, gutter(m));
+			padding-right: gutter(m);
+		}
+		@include viewport(s){
+			@include column(1, 2, gutter(s));
+			padding-right: gutter(s);
+		}
+		
+		.map-link {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+	}
+}
+
+.section-portrait {
+	img { max-width: 100%; }
+}
+
+.section-samples {}
+
+.the_singers {
+	max-width: 100%;
+	display: block;
+}
+
+.section-singers {
+	overflow: auto;
+	
+	h2 {
+		text-align: center;
+		
+		@include viewport(xs){
+			text-align: left;
+		}
+	}
+	h3 {
+		margin-bottom: .25em;
+	}
+	
+	.parts-low,
+	.parts-high {
+		@include column_parent;
+		
+		@include viewport(xs){
+			display: block;
+		}
+	}
+	
+	.part-group {
+		margin-bottom: 1.25em;
+		@include column(1, 2, gutter(l));
+		
+		&.soprano,
+		&.tenor {
+			text-align: right;
+		}
+		
+		&:last-of-type {
+			margin-right: 0;
+		}
+		
+		@include viewport(m){
+			@include column(1, 2, gutter(m));
+		}
+		
+		@include viewport(s){
+			@include column(1, 2, gutter(s));
+		}
+		@include viewport(xs){
+			&.soprano,
+			&.tenor {
+				text-align: left;
+			}
+		}
+	}
+	
+	.alumni {
+		
+		margin-top: 3em;
+		
+		h3 {
+			text-align: center;
+			padding-bottom: .5em;
+			@include viewport(xs){
+				text-align: left;
+			}
+			
+			@include icon(chevron_down, after);
+			&:after {
+				margin-left: .5em;
+				transition: .5s transform ease-out;
+				transform-origin: 47% 48%;
+			}
+			
+			&:hover {
+				text-decoration: underline;
+				cursor: pointer;
+			}
+		}
+		
+		ul {
+			@include column_parent();
+			padding: 0;
+			overflow: hidden;
+			max-height: 0px;
+			border-top: solid 1px $mayfield-red;
+			padding: 0;
+			transition: .5s max-height ease-out;
+			
+			.tenure {
+				font-size: .75em;
+				font-weight: 400;
+				margin-left: .5em;
+			}
+			
+			@include viewport(xs){
+				display: block;
+				
+				.column:last-of-type {
+					padding-top: 0;
+				}
+			}
+		}
+		.column {
+			@include column(1, 2, gutter(l));
+			padding-top: 1.5em;
+			
+			@include viewport(m){
+				@include column(1, 2, gutter(m));
+			}
+			
+			@include viewport(s){
+				@include column(1, 2, gutter(s));
+			}
+		}
+		
+		&.expand {
+			h3:after {
+				transform: rotate(-180deg);
+			}
+			ul {
+				max-height: 1000px;
+			}
+		}
+	}
+}
+
+.section-footer {
+	background-color: $mayfield-red;
+	color: #fff;
+	font-size: .85em;
+	
+	.content {
+		@include viewport(l){
+			padding: get_padding(m, tb) get_padding(m, lr);
+		}
+	}
+}

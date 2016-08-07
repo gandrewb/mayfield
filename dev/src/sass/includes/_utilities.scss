@@ -1,0 +1,13 @@
+@function get_padding($vp, $dir) {
+	@return map-get( map-get($section-padding, $vp), $dir);
+}
+
+@function gutter($vp) {
+	@return map-get($gutters, $vp);
+}
+
+@include viewport(xs){
+	.hide-on-small {
+		display: none;
+	}
+}

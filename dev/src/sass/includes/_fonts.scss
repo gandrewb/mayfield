@@ -1,0 +1,78 @@
+// ! •••••••••• FONTS
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v11/kcf5uOXucLcbFOydGU24WALUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url('fonts/fontello.eot?52140903');
+  src: url('fonts/fontello.eot?52140903#iefix') format('embedded-opentype'),
+       url('fonts/fontello.woff2?52140903') format('woff2'),
+       url('fonts/fontello.woff?52140903') format('woff'),
+       url('fonts/fontello.ttf?52140903') format('truetype'),
+       url('fonts/fontello.svg?52140903#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+$icons : (
+	facebook: '\e801',
+	instagram: '\e803',
+	twitter: '\e800',
+	pinterest: '\e805',
+	soundcloud: '\e802',
+	tumblr: '\e807',
+	vimeo: '\e808',
+	yelp: '\e806',
+	youtube: '\f16a',
+	
+	calendar: '\e811',
+	chevron_left: '\e814',
+	chevron_right: '\e815',
+	chevron_up: '\e816',
+	chevron_down: '\e813',
+	heart: '\e80a',
+	heart_empty: '\e80b',
+	location: '\e80d',
+	location_2: '\e812',
+	mail: '\e809',
+	search: '\e804',
+	star: '\e80c',
+	video: '\e80e',
+	
+	play: '\f00f',
+	pause: '\f00e',
+	to_end: '\f010',
+	to_start: '\f011',
+	fast_forward: '\f012',
+	rewind: '\f013',
+	stop: '\f080'
+);
+
+
+@mixin icon($name, $position) {
+	&:#{$position} {
+		font-family: "fontello";
+		font-style: normal;
+		font-weight: normal;
+		speak: none;
+		display: inline-block;
+		text-decoration: none; 
+		font-variant: normal;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		
+		content: map-get($icons, $name);
+	}
+}

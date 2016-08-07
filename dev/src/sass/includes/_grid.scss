@@ -1,0 +1,22 @@
+// ! •••••••••• GRID
+
+@mixin column_parent() {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+@mixin column($colspan: 1, $numcols: 2, $gutter: 40px) {
+
+	$onecol: 100% / $numcols;
+	$adjgutter: (($numcols - 1) * $gutter) / $numcols;
+	$gutteraddition: ($colspan - 1) * $gutter;
+	
+	$width: calc( (#{$onecol} - #{$adjgutter}) * #{$colspan} + #{$gutteraddition}); 
+	
+	position: relative;
+	flex-basis: $width;
+	flex-grow: 0;
+	flex-shrink: 0;
+	
+}

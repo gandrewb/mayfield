@@ -1,0 +1,32 @@
+$section-padding-tb: 75px;
+$section-padding-lr: 75px;
+
+$section-padding: (
+	l: (tb: 75px, lr: 75px),
+	m: (tb: 60px, lr: 50px),
+	s: (tb: 30px, lr: 20px)
+);
+
+$gutters: (
+	l: 40px,
+	m: 30px,
+	s: 20px
+);
+
+$rounded-corners: 10px;
+
+$background-alt: #f2f2f2;
+$mayfield-red: hsl(356, 80%, 29%);
+$darker-red:   hsl(356, 80%, 22%);
+
+
+$s-start: 550px;
+$m-start: 750px;
+$l-start: 980px;
+
+$breakpoints: (
+	'xs': (0, $s-start - 1),
+	's':  ($s-start, $m-start - 1),
+	'm':  ($m-start, $l-start - 1),
+	'l':  ($l-start, 'inf')
+);

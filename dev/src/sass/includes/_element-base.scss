@@ -1,0 +1,138 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	background-color: $mayfield-red;
+}
+
+body {
+	margin: 0;
+	font-family: 'Lato', 'Helvetica Neue', sans-serif;
+	font-weight: 300;
+	font-size: 21px;
+	line-height: 1.6;
+	
+	@include viewport(m){
+		font-size: 18px;
+	}
+	@include viewport(xs, s){
+		font-size: 16px;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Lato', 'Helvetica Neue', sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin-bottom: 1em;
+	line-height: 1.1;
+}
+h1, h2 {
+	letter-spacing: .25em;
+	margin-bottom: 2em;
+}
+h3, h4, h5, h6 {
+	letter-spacing: .1em;
+	margin-bottom: .5em;
+}
+h3 {
+	font-size: 1em;
+}
+
+p {
+	margin-bottom: 1em;
+	max-width: 40em;
+}
+
+li {
+	list-style: none;
+}
+
+button {
+	-webkit-appearance: none;
+	background-color: $mayfield-red;
+	color: white;
+	padding: .5em 1em;
+	font-size: 16px;
+	text-transform: uppercase;
+	border-radius: .2em;
+	border: none;
+	cursor: pointer;
+}
+input[type=text] {
+	border: none;
+	display: inline-block;
+	font-size: 1em;
+	font-weight: 200;
+	color: $mayfield-red;
+	
+	&:focus {
+		outline: none;
+	}
+}
+
+section {
+	position: relative;
+	background-color: $background-alt;
+}
+
+.content{
+	overflow: hidden;
+	margin: 0 auto;
+	padding: get_padding(l, tb) get_padding(l, lr);
+	max-width: 1200px + (get_padding(l, lr) * 2);
+	
+	@include viewport(m){
+		padding: get_padding(m, tb) get_padding(m, lr);
+	}
+	@include viewport(xs, s){
+		padding: get_padding(s, tb) get_padding(s, lr);
+	}
+}
+
+.map-link {
+	@include icon(location, before);
+	text-decoration: none;
+	color: #fff;
+	
+	&:hover {
+		text-decoration: underline;
+	}
+	
+	&:before {
+		margin-right: .5em;
+	}
+}
+
+.social-link {
+	display: inline-block;
+	font-size: 1.5em;
+	text-align: center;
+	color: $mayfield-red;
+	width: 2.3em;
+	height: 2.3em;
+	border-radius: 100%;
+	border: solid 2px $mayfield-red;
+	margin: .5em .5em 0 0;
+	vertical-align: top;
+	
+	&:hover {
+		background-color: $mayfield-red;
+		color: #fff;
+	}
+	&:active {
+		background-color: $darker-red;
+	}
+	&:before {
+		line-height: 2.2;
+	}
+}
+
+@mixin floating-box() {
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 0 35px rgba(0,0,0,0.1);
+}

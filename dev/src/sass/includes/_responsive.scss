@@ -1,0 +1,166 @@
+// •••••••••• VIEWPORTS ••••••••••
+
+
+/*
+$m-start: 550px;
+$l-start: 850px;
+
+$breakpoints: (
+	's': (0, $m-start - 1),
+	'm': ($m-start, $l-start - 1),
+	'l': ($l-start, 'inf')
+);
+*/
+
+@mixin viewport($args...){
+	$queries: query_list($args);
+	$queries: combine_queries($queries);
+	$media_query: build_query($queries);
+	
+	@media #{$media_query} {
+		@content;
+	}
+}
+
+@function build_query($qs){
+	$q: 'screen';
+	
+	@for $i from 1 through length($qs){
+		$q: $q + if($i!=1, ', screen', '');
+		
+		@if map-get(nth($qs, $i), 'min') != 0{
+			$q: $q + ' and (min-width: #{map-get(nth($qs, $i), "min")})';
+		}
+		@if map-get(nth($qs, $i), 'max') != 'inf'{
+			$q: $q + ' and (max-width: #{map-get(nth($qs, $i), "max")})';
+		}
+	}
+	@return $q;
+}
+
+@function query_list($args){
+	$newqueries: ();
+	
+	@for $i from 1 through length($args){
+		$min: nth(map-get($breakpoints, nth($args, $i)),1);
+		$max: nth(map-get($breakpoints, nth($args, $i)),2);
+		
+		$newqueries: append($newqueries, ('min': $min, 'max': $max));
+	}
+	
+	@return $newqueries;
+}
+
+@function combine_queries($quer){
+	@for $x from length($quer) through 1{
+		@if length($quer) > 1{
+			@for $y from length($quer)-1 through 1{
+				$xval: nth($quer, $x);
+				$yval: nth($quer, $y);
+				
+				$test_pos: test_queries($xval, $yval);
+				
+				@if $test_pos != 0 {
+					$min: null; $max: null;
+					@if $test_pos==1 {
+						$min: map-get($yval, 'min');
+						$max: map-get($xval, 'max');
+					}@else{
+						$min: map-get($xval, 'min');
+						$max: map-get($yval, 'max');
+					}
+					
+					$quer: set-nth($quer, $y, ('min': $min, 'max': $max));
+					$quer: remove-nth($quer, $x);
+				}
+			}
+		}
+	}
+
+	@return $quer;
+}
+
+//whether $q_a goes before (-1) or after (1) $q_b. Or neither (0)
+@function test_queries($q_a, $q_b){	
+	@if map-get($q_a, 'min') == (map-get($q_b, 'max')+1){
+		@return 1;
+	}
+	@else if map-get($q_a, 'max') == (map-get($q_b, 'min')-1){
+		@return -1;
+	}
+	@else{
+		@return 0;
+	}
+}
+
+@function remove-nth($list, $index) {
+	$result: (); 
+	
+	@for $i from 1 through length($list) {
+	  @if $i != $index {
+	    $result: append($result, nth($list, $i));
+	  }
+	}
+        
+  @return $result;
+}
+
+
+// •••••••••• IMAGES ••••••••••
+
+
+//all image maps need to be merged with $image_map
+$image_map: ();
+
+@mixin retina(){
+	@media print,
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (   min--moz-device-pixel-ratio: 2),
+	only screen and (     -o-min-device-pixel-ratio: 2),
+	only screen and (        min-device-pixel-ratio: 2),
+	only screen and (           min-resolution: 190dpi),
+	only screen and (            min-resolution: 2dppx){
+		@content;
+	}
+}
+
+@mixin image($img_name, $scale:false, $max:false){
+	@each $key in map-keys($breakpoints){
+		@include viewport($key){
+			
+			$img: map-get(map-get($image_map, $img_name), $key);
+			$h_ratio: map-get($img, 'h') / map-get($img, 'w');
+			
+			position: relative;
+			
+			&::before{
+				display: block;
+				content: '';
+				width: 100%;
+				padding-bottom: percentage($h_ratio);
+				background-image: url(map-get($img, 'img'));
+				background-size: contain;
+				background-repeat: no-repeat;
+				@if(map-has-key($img, 'retina')){
+					@include retina(){
+						background-image: url(map-get($img, 'retina'));
+					}
+				}
+			}
+			
+			@if($scale == true){
+				width: 100%;
+				@if($max != false){ max-width: $max;}
+			}@else{
+				width: map-get($img, 'w');
+			}
+		}
+	}
+}
+
+@mixin side_border_chop($max){
+	@media screen and (max-width: $max){
+		border-left-width: 0;
+		border-right-width: 0;
+	}
+}

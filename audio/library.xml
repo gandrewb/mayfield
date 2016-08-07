@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<playlists>
+	
+	
+	<playlist name="2016 Spring Concert" date="" folder="2016_spring">
+		
+		<song show_in_player="true">
+			<title>Set Me As a Seal</title>
+			<filename>set_me_as_a_seal.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Lida Rose</title>
+			<filename>lida_rose.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Meditation</title>
+			<filename>meditation.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>O mio babbino caro</title>
+			<filename>o_mio_babbino_caro.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Sing Me to Heaven</title>
+			<filename>sing_me_to_heaven.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Kiss the Girl</title>
+			<filename>kiss_the_girl.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Blah, Blah, Blah</title>
+			<filename>blah_blah_blah.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>When You Are Old and Gray</title>
+			<filename>when_you_are_old_and_gray.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Song for the Mira</title>
+			<filename>song_for_the_mira.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Shenandoah</title>
+			<filename>shenandoah.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Goodnight Moon</title>
+			<filename>goodnight_moon.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Five Hebrew Love Songs</title>
+			<filename>five_hebrew_love_songs.mp3</filename>
+		</song>
+
+		<song show_in_player="true">
+			<title>This Marriage</title>
+			<filename>this_marriage.mp3</filename>
+		</song>
+		
+	</playlist>
+	
+	
+	
+	<playlist name="2015 Christmas Concert" date="" folder="2015_christmas">
+		
+		<song show_in_player="true">
+			<title>The Holly and the Ivy</title>
+			<filename>the_holly_and_the_ivy.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Once in Royal David's City</title>
+			<filename>once_in_royal_davids_city.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>A Spotless Rose</title>
+			<filename>a_spotless_rose.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Veni, Veni, Emmanuel</title>
+			<filename>veni_veni_emanuel.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>In dulci jubilo</title>
+			<filename>in_dulci_jubilo.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Ave Maria</title>
+			<filename>ave_maria.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Sing We Now of Christmas</title>
+			<filename>sing_we_now_of_christmas.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Still, still, still</title>
+			<filename>still_still_still.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Riu, riu, chiu</title>
+			<filename>riu_riu_chiu.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>What Sweeter Music</title>
+			<filename>what_sweeter_music.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>This Little Babe</title>
+			<filename>this_little_babe.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>What Child Is This?</title>
+			<filename>what_child_is_this.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Joy to the World</title>
+			<filename>joy_to_the_world.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Gesu bambino</title>
+			<filename>gesu_bambino.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Go Tell It on the Mountain</title>
+			<filename>go_tell_it_on_the_mountain.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>It Came upon the Midnight Clear</title>
+			<filename>it_came_upon_the_midnight_clear.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Silent Night</title>
+			<filename>silent_night.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Have Yourself a Merry Little Christmas</title>
+			<filename>have_yourself_a_merry_little_christmas.mp3</filename>
+		</song>
+
+	</playlist>
+	
+	
+	
+	<playlist name="2015 Fall Concert" date="" folder="2015_fall">
+		
+		<song show_in_player="true">
+			<title>A Prayer of the Middle Ages</title>
+			<filename>a_prayer_of_the_middle_ages.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Down to the River to Pray</title>
+			<filename>down_to_the_river_to_pray.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Pilgrims Hymn From the Three Hermits</title>
+			<filename>pilgrims_hymn_from_the_three_hermits.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Frostiana — The Road Not Taken</title>
+			<filename>frostiana_the_road_not_taken.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Frostiana — The Pasture</title>
+			<filename>frostiana_the_pasture.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Frostiana — A Girl's Garden</title>
+			<filename>frostiana_a_girls_garden.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Frostiana — Stopping by the Woods on a Snowy Evening</title>
+			<filename>frostiana_stopping_by_the_woods_on_a_snowy_evening.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>My Shepherd Will Supply My Need</title>
+			<filename>my_shepherd_will_supply_my_need.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Saints Bound for Heaven</title>
+			<filename>saints_bound_for_heaven.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Shenandoah</title>
+			<filename>shenandoah.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>The Battle of Jericho</title>
+			<filename>the_battle_of_jericho.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Zion's Walls</title>
+			<filename>zions_walls.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>We'll Shout and Give Him Glory</title>
+			<filename>well_shoud_and_give_him_glory.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Let Me Fly</title>
+			<filename>let_me_fly.mp3</filename>
+		</song>
+
+	</playlist>
+	
+	
+</playlists>
