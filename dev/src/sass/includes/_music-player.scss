@@ -78,6 +78,7 @@
 			border-right: none;
 			white-space: nowrap;
 			overflow: scroll;
+			-webkit-overflow-scrolling: touch;
 			
 			li {
 				display: inline-block;
