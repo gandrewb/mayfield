@@ -54,6 +54,11 @@ section { position: relative; background-color: #f2f2f2; }
 .social-link:active { background-color: #650b11; }
 .social-link:before { line-height: 2.2; }
 
+.modal { position: fixed; background-color: rgba(0, 0, 0, 0.6); width: 100%; top: -100%; z-index: 100; }
+.modal > div { background-color: #fff; border-radius: 8px; box-shadow: 0 0 35px rgba(0, 0, 0, 0.1); padding: 1.5em 2em; position: absolute; width: 90%; max-width: 30em; top: 50%; left: 50%; transform: translate(-50%, -70%); opacity: .6; transition: all .5s ease-out; }
+.modal.visible { top: 0; height: 100%; }
+.modal.visible > div { transform: translate(-50%, -50%); opacity: 1; }
+
 .audio_player { background-color: #fff; border-radius: 8px; box-shadow: 0 0 35px rgba(0, 0, 0, 0.1); display: -ms-flexbox; display: flex; overflow: hidden; min-height: 10em; }
 .audio_player .playlists, .audio_player .songs { width: 50%; }
 .audio_player li { position: relative; padding: .4em 1em .5em; border-bottom: solid 1px rgba(133, 15, 23, 0.15); }
@@ -66,7 +71,7 @@ section { position: relative; background-color: #f2f2f2; }
 .audio_player li:after { float: right; color: #777; }
 @media screen and (max-width: 749px) { .audio_player { -ms-flex-direction: column; flex-direction: column; }
   .audio_player .playlists, .audio_player .songs { width: 100%; } }
-.audio_player .playlists { border-right: solid 1px rgba(133, 15, 23, 0.15); background: url("../imgs/two_singers_4.svg") 15% bottom/40% no-repeat, linear-gradient(rgba(133, 15, 23, 0) 70%, rgba(133, 15, 23, 0.15) 100%); }
+.audio_player .playlists { border-right: solid 1px rgba(133, 15, 23, 0.15); background: url("../imgs/two_singers.svg") 15% bottom/40% no-repeat, linear-gradient(rgba(133, 15, 23, 0) 70%, rgba(133, 15, 23, 0.15) 100%); }
 .audio_player .playlists li:after { font-family: "fontello"; font-style: normal; font-weight: normal; speak: none; display: inline-block; text-decoration: none; font-variant: normal; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; content: ""; }
 @media screen and (max-width: 749px) { .audio_player .playlists { background: #850f17; border-right: none; white-space: nowrap; overflow: scroll; }
   .audio_player .playlists li { display: inline-block; border-bottom: none; color: rgba(255, 255, 255, 0.7); }
@@ -144,8 +149,10 @@ section { position: relative; background-color: #f2f2f2; }
   100% { transform: scale(0.8); opacity: 0; } }
 .section-intro { position: relative; text-align: center; background-color: #290a0c; }
 .section-intro h1 { position: absolute; text-indent: -9999px; }
-.section-intro .hero_backdrop { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-image: url("../imgs/notation_backdrop.jpg"); background-size: cover; background-repeat: no-repeat; background-position: center center; -webkit-filter: blur(5px); filter: blur(5px); }
+.section-intro .hero_backdrop { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-image: url("../imgs/notation_backdrop_l.jpg"); background-size: cover; background-repeat: no-repeat; background-position: center center; -webkit-filter: blur(5px); filter: blur(5px); }
 .section-intro .mayfield_logo { position: relative; max-width: 33%; margin: 12% 0; }
+@media screen and (min-width: 750px) and (max-width: 979px) { .section-intro { background-image: url("../imgs/notation_backdrop_m.jpg"); } }
+@media screen and (max-width: 749px) { .section-intro { background-image: url("../imgs/notation_backdrop_s.jpg"); } }
 @media screen and (max-width: 549px) { .section-intro .hero_backdrop { background-size: 160%; }
   .section-intro .mayfield_logo { max-width: 45%; } }
 
@@ -183,7 +190,10 @@ section { position: relative; background-color: #f2f2f2; }
 
 .section-portrait img { max-width: 100%; }
 
-.the_singers { max-width: 100%; display: block; }
+.the_singers { padding-bottom: 46.09%; background-repeat: no-repeat; background-size: 100%; background-image: url("/imgs/mayfield_singers_portrait_Dec2015_l.jpg"); }
+@media screen and (min-width: 750px) and (max-width: 979px) { .the_singers { background-image: url("/imgs/mayfield_singers_portrait_Dec2015_m.jpg"); } }
+@media screen and (min-width: 550px) and (max-width: 749px) { .the_singers { background-image: url("/imgs/mayfield_singers_portrait_Dec2015_s.jpg"); } }
+@media screen and (max-width: 549px) { .the_singers { background-image: url("/imgs/mayfield_singers_portrait_Dec2015_xs.jpg"); } }
 
 .section-singers { overflow: auto; }
 .section-singers h2 { text-align: center; }
@@ -215,5 +225,9 @@ section { position: relative; background-color: #f2f2f2; }
 
 .section-footer { background-color: #850f17; color: #fff; font-size: .85em; }
 @media screen and (min-width: 980px) { .section-footer .content { padding: 60px 50px; } }
+
+.contribution-thank-you .thank_you_logo { height: 65px; display: block; margin: 1em 0 0; }
+.contribution-thank-you p { margin-bottom: .5em; }
+.contribution-thank-you button { top: 1em; left: 1em; background-color: white; border: solid 1px #850f17; color: #850f17; border-radius: 2em; font-size: 2em; padding: .075em .19em .225em; line-height: .7; margin-bottom: .5em; }
 
 

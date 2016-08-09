@@ -66,19 +66,21 @@ var main = {
 
 
 	init_stripe: function(){
+		
+		var donate_btn = document.getElementById('donate_button');
+		var donation_amt = document.getElementById('donation_amount');
+		var thank_you = document.getElementById('contribution_thank_you');
+		var thank_you_close = document.getElementById('close_thank_you_button');
+		
 		var handler = StripeCheckout.configure({
 			key: 'pk_test_HySA7ahGkleHdgfsB6AZTdxz',
 			image: 'https://s3.amazonaws.com/stripe-uploads/acct_18cAXcFiyAeAkygfmerchant-icon-1469697187614-image.png',
 			locale: 'auto',
 			token: function(token) {
-				// function to call when transaction completes
-				// You can access the token ID with `token.id`.
-				// Get the token ID to your server-side code for use.
+				document.querySelector('[data-amount]').innerHTML = donation_amt.value;
+				thank_you.classList.add('visible');
 			}
 		});
-	
-		var donate_btn = document.getElementById('donate_button');
-		var donation_amt = document.getElementById('donation_amount');
 	
 		donate_btn.addEventListener('click', function(e) {
 			// Open Checkout with further options:
@@ -89,6 +91,8 @@ var main = {
 			});
 			e.preventDefault();
 		});
+		
+		thank_you_close.addEventListener('click', function(e) { thank_you.classList.remove('visible'); })
 			
 		//Close Checkout on page navigation:
 		window.addEventListener('popstate', function() {

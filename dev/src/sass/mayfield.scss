@@ -20,7 +20,7 @@
 	.hero_backdrop {
 		position: absolute;
 		top: 0; right: 0; bottom: 0; left: 0;
-		background-image: url('../imgs/notation_backdrop.jpg');
+		background-image: url('../imgs/notation_backdrop_l.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center center;
@@ -32,6 +32,14 @@
 		position: relative;
 		max-width: 33%;
 		margin: 12% 0;
+	}
+	
+	@include viewport(m){
+		background-image: url('../imgs/notation_backdrop_m.jpg');
+	}
+	
+	@include viewport(xs, s){
+		background-image: url('../imgs/notation_backdrop_s.jpg');
 	}
 	
 	@include viewport(xs){
@@ -197,8 +205,20 @@
 .section-samples {}
 
 .the_singers {
-	max-width: 100%;
-	display: block;
+	padding-bottom: 46.09%;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-image: url('/imgs/mayfield_singers_portrait_Dec2015_l.jpg');
+	
+	@include viewport(m){
+		background-image: url('/imgs/mayfield_singers_portrait_Dec2015_m.jpg');
+	}
+	@include viewport(s){
+		background-image: url('/imgs/mayfield_singers_portrait_Dec2015_s.jpg');
+	}
+	@include viewport(xs){
+		background-image: url('/imgs/mayfield_singers_portrait_Dec2015_xs.jpg');
+	}
 }
 
 .section-singers {
@@ -332,5 +352,29 @@
 		@include viewport(l){
 			padding: get_padding(m, tb) get_padding(m, lr);
 		}
+	}
+}
+
+.contribution-thank-you {
+	
+	.thank_you_logo {
+		height: 65px;
+		display: block;
+		margin: 1em 0 0;
+	}
+	p {
+		margin-bottom: .5em;
+	}
+	button {
+		top: 1em;
+		left: 1em;
+		background-color: white;
+		border: solid 1px $mayfield-red;
+		color: $mayfield-red;
+		border-radius: 2em;
+		font-size: 2em;
+		padding: .075em .19em .225em;
+		line-height: .7;
+		margin-bottom: .5em;
 	}
 }

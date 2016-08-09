@@ -1,3 +1,19 @@
+//   ••••••••••
+// ! MIXINS
+//   ••••••••••
+
+@mixin floating-box() {
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 0 35px rgba(0,0,0,0.1);
+}
+
+
+
+//   ••••••••••
+// ! STYLES
+//   ••••••••••
+
 * {
 	margin: 0;
 	padding: 0;
@@ -131,8 +147,33 @@ section {
 	}
 }
 
-@mixin floating-box() {
-	background-color: #fff;
-	border-radius: 8px;
-	box-shadow: 0 0 35px rgba(0,0,0,0.1);
+.modal {
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.6);
+	width: 100%;
+	top: -100%;
+	z-index: 100;
+	
+	& > div {
+		@include floating-box;
+		padding: 1.5em 2em;
+		position: absolute;
+		width: 90%;
+		max-width: 30em;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -70%);
+		opacity: .6;
+		transition: all .5s ease-out;
+	}
+	
+	&.visible {
+		top: 0;
+		height: 100%;
+		
+		& > div {
+			transform: translate(-50%, -50%);
+			opacity: 1;
+		}
+	}
 }

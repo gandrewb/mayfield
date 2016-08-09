@@ -1,0 +1,3 @@
+RewriteEngine On
+
+RewriteRule    ^(.*)$    https://mayfieldsingers.org/$1    [R,L]   #Forces https for secure payments
