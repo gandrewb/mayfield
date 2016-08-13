@@ -382,21 +382,12 @@
 	.thank_you_logo {
 		height: 65px;
 		display: block;
-		margin: 1em 0 0;
+		margin: 0 0 1em;
 	}
 	p {
 		margin-bottom: .5em;
 	}
 	button {
-		top: 1em;
-		left: 1em;
-		background-color: white;
-		border: solid 1px $mayfield-red;
-		color: $mayfield-red;
-		border-radius: 2em;
-		font-size: 2em;
-		padding: .075em .19em .225em;
-		line-height: .7;
-		margin-bottom: .5em;
+		margin-top: 1em;
 	}
 }

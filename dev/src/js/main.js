@@ -45,6 +45,26 @@ var main = {
 
 
 
+	analyticsEvent: function(options){
+		options.hitType = 'event';
+		
+		if(window.ga) { 
+			ga('send', options);
+		}
+	},
+
+
+
+	donationAnalytics: function(action, amount){
+		this.analyticsEvent({
+			eventCategory: 'Donation',
+			eventAction: action,
+			eventValue: amount
+		});
+	},
+
+
+
 	for_each: function(list, callback) {
 		for(var x=0, l=list.length; x<l; x++){
 			callback(list[x], x);
@@ -79,6 +99,7 @@ var main = {
 				token: function(token) {
 					document.querySelector('[data-amount]').innerHTML = donation_amt.value;
 					thank_you.classList.add('visible');
+					main.donationAnalytics('paid', donation_amt.value);
 				}
 			});
 		
@@ -89,6 +110,7 @@ var main = {
 					description: 'Charitable Contribution',
 					amount: donation_amt.value * 100
 				});
+				main.donationAnalytics('triggered', donation_amt.value);
 				e.preventDefault();
 			});
 			

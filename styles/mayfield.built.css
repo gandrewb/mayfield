@@ -230,8 +230,8 @@ section { position: relative; background-color: #f2f2f2; }
 .section-footer { background-color: #850f17; color: #fff; font-size: .85em; }
 @media screen and (min-width: 980px) { .section-footer .content { padding: 60px 50px; } }
 
-.contribution-thank-you .thank_you_logo { height: 65px; display: block; margin: 1em 0 0; }
+.contribution-thank-you .thank_you_logo { height: 65px; display: block; margin: 0 0 1em; }
 .contribution-thank-you p { margin-bottom: .5em; }
-.contribution-thank-you button { top: 1em; left: 1em; background-color: white; border: solid 1px #850f17; color: #850f17; border-radius: 2em; font-size: 2em; padding: .075em .19em .225em; line-height: .7; margin-bottom: .5em; }
+.contribution-thank-you button { margin-top: 1em; }
 
 

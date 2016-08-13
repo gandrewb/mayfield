@@ -65,6 +65,25 @@ proto.populateSongs = function(list_idx) {
 // PRIVATE METHODS
 // ••••••••••
 
+proto._advancePlaylist = function(){
+	if (this.cur_song[1] < this.playlists[this.cur_song[0]].songs.length-1) {
+		this.cur_song[1]++;
+		
+		var song = this.playlists[this.cur_song[0]].songs[this.cur_song[1]];
+		
+		if(this.show_all || song.show==='true') {
+			return true;
+		} else {
+			return this._advancePlaylist();
+		}
+		
+	} else {
+		return false;
+	}
+};
+
+
+
 proto._clearClasses = function(selector, classArray) {
 	var els = document.querySelectorAll(selector);
 	for(var x=0, l=els.length; x<l; x++){
@@ -135,6 +154,19 @@ proto._listBtnClick = function(btn, parent) {
 
 
 
+proto._songAnalytics = function(song_coord, action){
+	if(window.ga) {
+		ga('send', {
+			hitType: 'event',
+			eventCategory: this.playlists[song_coord[0]].songs[song_coord[1]].title,
+			eventAction: action,
+			eventLabel: this.playlists[song_coord[0]].name
+		});
+	}
+};
+
+
+
 proto._songBtnClick = function(btn, parent) {
 	var idx = btn.getAttribute('data-song');
 	var progress_bar = btn.querySelector('.progress_bar');
@@ -170,6 +202,8 @@ proto._songBtnClick = function(btn, parent) {
 			
 			song.audio.play();
 			
+			this._songAnalytics(parent.cur_song, 'play');
+			
 			btn.classList.add('playing');
 			this._updatePlayhead(progress_bar, song.audio);
 		}
@@ -178,26 +212,9 @@ proto._songBtnClick = function(btn, parent) {
 
 
 
-proto._advancePlaylist = function(){
-	if (this.cur_song[1] < this.playlists[this.cur_song[0]].songs.length-1) {
-		this.cur_song[1]++;
-		
-		var song = this.playlists[this.cur_song[0]].songs[this.cur_song[1]];
-		
-		if(this.show_all || song.show==='true') {
-			return true;
-		} else {
-			return this._advancePlaylist();
-		}
-		
-	} else {
-		return false;
-	}
-};
-
-
-
 proto._songEnded = function() {
+	this._songAnalytics(this.cur_song, 'complete');
+	
 	this._clearClasses('[data-song]', ['playing', 'paused']);
 	
 	if (this._advancePlaylist()) {
