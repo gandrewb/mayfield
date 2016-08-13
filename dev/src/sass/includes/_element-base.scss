@@ -35,7 +35,7 @@ body {
 		font-size: 18px;
 	}
 	@include viewport(xs, s){
-		font-size: 16px;
+		font-size: 17px;
 	}
 }
 
@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1.1;
 }
 h1, h2 {
-	letter-spacing: .25em;
+	letter-spacing: .23em;
 	margin-bottom: 2em;
 }
 h3, h4, h5, h6 {

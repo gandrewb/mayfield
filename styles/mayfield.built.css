@@ -19,11 +19,11 @@ html { background-color: #850f17; }
 
 body { margin: 0; font-family: 'Lato', 'Helvetica Neue', sans-serif; font-weight: 300; font-size: 21px; line-height: 1.6; }
 @media screen and (min-width: 750px) and (max-width: 979px) { body { font-size: 18px; } }
-@media screen and (max-width: 749px) { body { font-size: 16px; } }
+@media screen and (max-width: 749px) { body { font-size: 17px; } }
 
 h1, h2, h3, h4, h5, h6 { font-family: 'Lato', 'Helvetica Neue', sans-serif; font-weight: 400; text-transform: uppercase; margin-bottom: 1em; line-height: 1.1; }
 
-h1, h2 { letter-spacing: .25em; margin-bottom: 2em; }
+h1, h2 { letter-spacing: .23em; margin-bottom: 2em; }
 
 h3, h4, h5, h6 { letter-spacing: .1em; margin-bottom: .5em; }
 
@@ -71,9 +71,9 @@ section { position: relative; background-color: #f2f2f2; }
 .audio_player li:after { float: right; color: #777; }
 @media screen and (max-width: 749px) { .audio_player { -ms-flex-direction: column; flex-direction: column; }
   .audio_player .playlists, .audio_player .songs { width: 100%; } }
-.audio_player .playlists { border-right: solid 1px rgba(133, 15, 23, 0.15); background: url("../imgs/two_singers.svg") 15% bottom/40% no-repeat, linear-gradient(rgba(133, 15, 23, 0) 70%, rgba(133, 15, 23, 0.15) 100%); }
+.audio_player .playlists { border-right: solid 1px rgba(133, 15, 23, 0.15); background: url("../imgs/logos/Mayfield_Mark_wht.svg") center 95%/30% no-repeat, rgba(133, 15, 23, 0.03); }
 .audio_player .playlists li:after { font-family: "fontello"; font-style: normal; font-weight: normal; speak: none; display: inline-block; text-decoration: none; font-variant: normal; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; content: ""; }
-@media screen and (max-width: 749px) { .audio_player .playlists { background: #850f17; border-right: none; white-space: nowrap; overflow: scroll; -webkit-overflow-scrolling: touch; }
+@media screen and (max-width: 749px) { .audio_player .playlists { background: #850f17; border-right: none; white-space: nowrap; overflow: scroll; -webkit-overflow-scrolling: touch; border-top-left-radius: 8px; border-top-right-radius: 8px; }
   .audio_player .playlists li { display: inline-block; border-bottom: none; color: rgba(255, 255, 255, 0.7); }
   .audio_player .playlists li span { width: auto; }
   .audio_player .playlists li:after { float: none; margin-left: .5em; color: rgba(255, 255, 255, 0.7); }
@@ -147,13 +147,15 @@ section { position: relative; background-color: #f2f2f2; }
   100% { transform: translateX(0%); } }
 @keyframes fade-back { 0% { transform: scale(1); opacity: 1; }
   100% { transform: scale(0.8); opacity: 0; } }
+@keyframes zoom-out { 0% { transform: scale(1.4); }
+  100% { transform: scale(1); } }
 .section-intro { position: relative; text-align: center; background-color: #290a0c; }
 .section-intro h1 { position: absolute; text-indent: -9999px; }
-.section-intro .hero_backdrop { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-image: url("../imgs/notation_backdrop_l.jpg"); background-size: cover; background-repeat: no-repeat; background-position: center center; -webkit-filter: blur(5px); filter: blur(5px); }
+.section-intro .hero_backdrop { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-image: url("../imgs/notation_backdrop_l.jpg"); background-size: cover; background-repeat: no-repeat; background-position: center center; -webkit-filter: blur(5px); filter: blur(5px); animation: zoom-out 5s ease-out; }
 .section-intro .mayfield_logo { position: relative; max-width: 33%; margin: 12% 0; }
-@media screen and (min-width: 750px) and (max-width: 979px) { .section-intro { background-image: url("../imgs/notation_backdrop_m.jpg"); } }
-@media screen and (max-width: 749px) { .section-intro { background-image: url("../imgs/notation_backdrop_s.jpg"); } }
-@media screen and (max-width: 549px) { .section-intro .hero_backdrop { background-size: 160%; }
+@media screen and (min-width: 750px) and (max-width: 979px) { .section-intro .hero_backdrop { background-image: url("../imgs/notation_backdrop_m.jpg"); -webkit-filter: blur(4px); filter: blur(4px); } }
+@media screen and (max-width: 749px) { .section-intro .hero_backdrop { background-image: url("../imgs/notation_backdrop_s.jpg"); -webkit-filter: blur(3px); filter: blur(3px); } }
+@media screen and (max-width: 549px) { .section-intro .hero_backdrop { background-size: 160%; -webkit-filter: blur(2px); filter: blur(2px); }
   .section-intro .mayfield_logo { max-width: 45%; } }
 
 .section-our-story .content { display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; -ms-flex-wrap: wrap; flex-wrap: wrap; -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
@@ -161,6 +163,7 @@ section { position: relative; background-color: #f2f2f2; }
 .section-our-story .about-us { position: relative; -ms-flex-preferred-size: calc( (33.33333% - 26.66667px) * 2 + 40px); flex-basis: calc( (33.33333% - 26.66667px) * 2 + 40px); -ms-flex-positive: 0; flex-grow: 0; -ms-flex-negative: 0; flex-shrink: 0; padding-right: 40px; }
 @media screen and (min-width: 750px) and (max-width: 979px) { .section-our-story .about-us { position: relative; -ms-flex-preferred-size: calc( (33.33333% - 20px) * 2 + 30px); flex-basis: calc( (33.33333% - 20px) * 2 + 30px); -ms-flex-positive: 0; flex-grow: 0; -ms-flex-negative: 0; flex-shrink: 0; padding-right: 30px; } }
 @media screen and (max-width: 749px) { .section-our-story .about-us { padding-right: 0; } }
+.section-our-story .social-links { white-space: nowrap; }
 .section-our-story .icon-twitter:before { font-family: "fontello"; font-style: normal; font-weight: normal; speak: none; display: inline-block; text-decoration: none; font-variant: normal; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; content: ""; }
 .section-our-story .icon-twitter:before { font-size: .9em; line-height: 2.4; }
 .section-our-story .icon-facebook:before { font-family: "fontello"; font-style: normal; font-weight: normal; speak: none; display: inline-block; text-decoration: none; font-variant: normal; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; content: ""; }
@@ -172,6 +175,7 @@ section { position: relative; background-color: #f2f2f2; }
 .section-our-story .contributions-widget p { font-size: .85em; font-weight: 400; margin-bottom: .5em; }
 .section-our-story .contributions-widget form span { display: inline-block; width: 100%; border-bottom: solid 1px #850f17; color: #850f17; font-size: 1.3em; margin: .25em 0 .4em; }
 .section-our-story .contributions-widget form input[type=text] { margin: .12em 0 0 .1em; width: 85%; }
+.section-our-story .contributions-widget form button { margin-top: 1.5em; }
 @media screen and (min-width: 750px) and (max-width: 979px) { .section-our-story .contributions-widget { padding: 30px; } }
 @media screen and (max-width: 749px) { .section-our-story .contributions-widget { padding: 20px; margin-top: 2em; } }
 

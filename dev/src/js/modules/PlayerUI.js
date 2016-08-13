@@ -3,8 +3,9 @@
 
 var Song = require('./Song');
 
-function PlayerUI(parent_el, playlists) {
+function PlayerUI(parent_el, show_all, playlists) {
 	this.el = parent_el;
+	this.show_all = show_all;
 	this.list_ul = this.el.querySelector('[data-playlist-container]');
 	this.songs_div = this.el.querySelector('[data-song-container]');
 	
@@ -49,8 +50,11 @@ proto.populateSongs = function(list_idx) {
 	
 	for(var x=0, l=song_list.length; x<l; x++) {
 		var song = song_list[x];
-		var li = this._getSongLi(song, x);
-		ul.appendChild(li);
+		
+		if(this.show_all || song.show==='true'){
+			var li = this._getSongLi(song, x);
+			ul.appendChild(li);
+		}
 	}
 	
 	this.songs_div.appendChild(ul);
@@ -174,11 +178,29 @@ proto._songBtnClick = function(btn, parent) {
 
 
 
+proto._advancePlaylist = function(){
+	if (this.cur_song[1] < this.playlists[this.cur_song[0]].songs.length-1) {
+		this.cur_song[1]++;
+		
+		var song = this.playlists[this.cur_song[0]].songs[this.cur_song[1]];
+		
+		if(this.show_all || song.show==='true') {
+			return true;
+		} else {
+			return this._advancePlaylist();
+		}
+		
+	} else {
+		return false;
+	}
+};
+
+
+
 proto._songEnded = function() {
 	this._clearClasses('[data-song]', ['playing', 'paused']);
 	
-	if(this.cur_song[1] < this.playlists[this.cur_song[0]].songs.length-1) {
-		this.cur_song[1]++;
+	if (this._advancePlaylist()) {
 		this._songBtnClick(this.songs_div.querySelector('[data-playlist="'+ this.cur_song[0] +'"] [data-song="'+ this.cur_song[1] +'"]'), this);
 	}
 };

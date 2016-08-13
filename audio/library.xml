@@ -10,17 +10,17 @@
 			<filename>set_me_as_a_seal.mp3</filename>
 		</song>
 		
-		<song show_in_player="true">
+		<song show_in_player="false">
 			<title>Lida Rose</title>
 			<filename>lida_rose.mp3</filename>
 		</song>
 		
-		<song show_in_player="true">
+		<song show_in_player="false">
 			<title>Meditation</title>
 			<filename>meditation.mp3</filename>
 		</song>
 		
-		<song show_in_player="true">
+		<song show_in_player="false">
 			<title>O mio babbino caro</title>
 			<filename>o_mio_babbino_caro.mp3</filename>
 		</song>
@@ -30,17 +30,17 @@
 			<filename>sing_me_to_heaven.mp3</filename>
 		</song>
 		
-		<song show_in_player="true">
+		<song show_in_player="false">
 			<title>Kiss the Girl</title>
 			<filename>kiss_the_girl.mp3</filename>
 		</song>
 		
-		<song show_in_player="true">
+		<song show_in_player="false">
 			<title>Blah, Blah, Blah</title>
 			<filename>blah_blah_blah.mp3</filename>
 		</song>
 		
-		<song show_in_player="true">
+		<song show_in_player="false">
 			<title>When You Are Old and Gray</title>
 			<filename>when_you_are_old_and_gray.mp3</filename>
 		</song>
@@ -55,7 +55,7 @@
 			<filename>shenandoah.mp3</filename>
 		</song>
 		
-		<song show_in_player="true">
+		<song show_in_player="false">
 			<title>Goodnight Moon</title>
 			<filename>goodnight_moon.mp3</filename>
 		</song>
@@ -141,7 +141,7 @@
 			<filename>joy_to_the_world.mp3</filename>
 		</song>
 		
-		<song show_in_player="true">
+		<song show_in_player="false">
 			<title>Gesu bambino</title>
 			<filename>gesu_bambino.mp3</filename>
 		</song>
@@ -151,7 +151,7 @@
 			<filename>go_tell_it_on_the_mountain.mp3</filename>
 		</song>
 		
-		<song show_in_player="true">
+		<song show_in_player="false">
 			<title>It Came upon the Midnight Clear</title>
 			<filename>it_came_upon_the_midnight_clear.mp3</filename>
 		</song>
@@ -177,7 +177,7 @@
 			<filename>a_prayer_of_the_middle_ages.mp3</filename>
 		</song>
 		
-		<song show_in_player="true">
+		<song show_in_player="false">
 			<title>Down to the River to Pray</title>
 			<filename>down_to_the_river_to_pray.mp3</filename>
 		</song>
@@ -217,7 +217,7 @@
 			<filename>saints_bound_for_heaven.mp3</filename>
 		</song>
 		
-		<song show_in_player="true">
+		<song show_in_player="false">
 			<title>Shenandoah</title>
 			<filename>shenandoah.mp3</filename>
 		</song>

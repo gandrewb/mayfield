@@ -6,11 +6,11 @@ var MusicPlayer;
 var main = {
 	
 	init: function(){
-		this.init_analytics();
-		this.init_stripe();
-		
 		this.alumni_section();
 		this.load_playlists();
+		
+		this.init_analytics();
+		this.init_stripe();
 	},
 	
 	
@@ -66,38 +66,39 @@ var main = {
 
 
 	init_stripe: function(){
-		
 		var donate_btn = document.getElementById('donate_button');
 		var donation_amt = document.getElementById('donation_amount');
 		var thank_you = document.getElementById('contribution_thank_you');
 		var thank_you_close = document.getElementById('close_thank_you_button');
 		
-		var handler = StripeCheckout.configure({
-			key: 'pk_test_HySA7ahGkleHdgfsB6AZTdxz',
-			image: 'https://s3.amazonaws.com/stripe-uploads/acct_18cAXcFiyAeAkygfmerchant-icon-1469697187614-image.png',
-			locale: 'auto',
-			token: function(token) {
-				document.querySelector('[data-amount]').innerHTML = donation_amt.value;
-				thank_you.classList.add('visible');
-			}
-		});
-	
-		donate_btn.addEventListener('click', function(e) {
-			// Open Checkout with further options:
-			handler.open({
-				name: 'Mayfield Singers Donation',
-				description: 'Charitable Contribution',
-				amount: donation_amt.value * 100
+		if(window.StripeCheckout) {
+			var handler = StripeCheckout.configure({
+				key: 'pk_test_HySA7ahGkleHdgfsB6AZTdxz',
+				image: 'https://mayfieldsingers.org/apple-touch-icon.png',
+				locale: 'auto',
+				token: function(token) {
+					document.querySelector('[data-amount]').innerHTML = donation_amt.value;
+					thank_you.classList.add('visible');
+				}
 			});
-			e.preventDefault();
-		});
 		
-		thank_you_close.addEventListener('click', function(e) { thank_you.classList.remove('visible'); })
+			donate_btn.addEventListener('click', function(e) {
+				// Open Checkout with further options:
+				handler.open({
+					name: 'Mayfield Singers Donation',
+					description: 'Charitable Contribution',
+					amount: donation_amt.value * 100
+				});
+				e.preventDefault();
+			});
 			
-		//Close Checkout on page navigation:
-		window.addEventListener('popstate', function() {
-			handler.close();
-		});
+			thank_you_close.addEventListener('click', function(e) { thank_you.classList.remove('visible'); })
+				
+			//Close Checkout on page navigation:
+			window.addEventListener('popstate', function() {
+				handler.close();
+			});
+		}
 	},
 
 
@@ -111,7 +112,7 @@ var main = {
 			var el = document.getElementById('audio_player');
 			var json = main.xml_to_json(xml);
 			
-			MusicPlayer = new PlayerUI(el, json);
+			MusicPlayer = new PlayerUI(el, false, json);
 			MusicPlayer.populateLists();
 		});
 	},

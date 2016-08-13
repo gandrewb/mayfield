@@ -66,8 +66,8 @@
 	.playlists {
 		border-right: solid 1px $divider-color;
 		background: 
-			url("../imgs/two_singers.svg") 15% bottom/40% no-repeat,
-			linear-gradient(rgba(133, 15, 23, 0) 70%, rgba(133, 15, 23, 0.15) 100%);
+			url("../imgs/logos/Mayfield_Mark_wht.svg") center 95%/30% no-repeat,
+			rgba(133, 15, 23, 0.03);
 		
 		li {
 			@include icon(chevron_right, after);
@@ -79,6 +79,8 @@
 			white-space: nowrap;
 			overflow: scroll;
 			-webkit-overflow-scrolling: touch;
+			border-top-left-radius: 8px;
+			border-top-right-radius: 8px;
 			
 			li {
 				display: inline-block;
