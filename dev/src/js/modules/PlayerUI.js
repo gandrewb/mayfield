@@ -158,9 +158,10 @@ proto._songAnalytics = function(song_coord, action){
 	if(window.ga) {
 		ga('send', {
 			hitType: 'event',
-			eventCategory: this.playlists[song_coord[0]].songs[song_coord[1]].title,
+			eventCategory: 'Music Player',
 			eventAction: action,
-			eventLabel: this.playlists[song_coord[0]].name
+			eventLabel: this.playlists[song_coord[0]].songs[song_coord[1]].title,
+			eventValue: song_coord[0]
 		});
 	}
 };
