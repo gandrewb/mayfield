@@ -1,0 +1,3 @@
+dev/node_modules
+dev/.sass-cache
+scripts/stripe_config.php

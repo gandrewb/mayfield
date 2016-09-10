@@ -149,7 +149,7 @@ section { position: relative; background-color: #f2f2f2; }
   100% { transform: scale(0.8); opacity: 0; } }
 @keyframes zoom-out { 0% { transform: scale(1.4); }
   100% { transform: scale(1); } }
-.section-intro { position: relative; text-align: center; background-color: #290a0c; }
+.section-intro { position: relative; text-align: center; background-color: #290a0c; overflow: hidden; }
 .section-intro h1 { position: absolute; text-indent: -9999px; }
 .section-intro .hero_backdrop { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-image: url("../imgs/notation_backdrop_l.jpg"); background-size: cover; background-repeat: no-repeat; background-position: center center; -webkit-filter: blur(5px); filter: blur(5px); animation: zoom-out 5s ease-out; }
 .section-intro .mayfield_logo { position: relative; max-width: 33%; margin: 12% 0; }
@@ -158,7 +158,7 @@ section { position: relative; background-color: #f2f2f2; }
 @media screen and (max-width: 549px) { .section-intro .hero_backdrop { background-size: 160%; -webkit-filter: blur(2px); filter: blur(2px); }
   .section-intro .mayfield_logo { max-width: 45%; } }
 
-.section-our-story .content { display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; -ms-flex-wrap: wrap; flex-wrap: wrap; -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
+.section-our-story .content { display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; -ms-flex-wrap: wrap; flex-wrap: wrap; -ms-flex-wrap: nowrap; flex-wrap: nowrap; -ms-flex-align: start; align-items: flex-start; }
 @media screen and (max-width: 749px) { .section-our-story .content { display: block; } }
 .section-our-story .about-us { position: relative; -ms-flex-preferred-size: calc( (33.33333% - 26.66667px) * 2 + 40px); flex-basis: calc( (33.33333% - 26.66667px) * 2 + 40px); -ms-flex-positive: 0; flex-grow: 0; -ms-flex-negative: 0; flex-shrink: 0; padding-right: 40px; }
 @media screen and (min-width: 750px) and (max-width: 979px) { .section-our-story .about-us { position: relative; -ms-flex-preferred-size: calc( (33.33333% - 20px) * 2 + 30px); flex-basis: calc( (33.33333% - 20px) * 2 + 30px); -ms-flex-positive: 0; flex-grow: 0; -ms-flex-negative: 0; flex-shrink: 0; padding-right: 30px; } }
@@ -171,13 +171,14 @@ section { position: relative; background-color: #f2f2f2; }
 .section-our-story .icon-soundcloud:before { font-size: 1.1em; line-height: 1.8; }
 .section-our-story .icon-instagram:before { font-family: "fontello"; font-style: normal; font-weight: normal; speak: none; display: inline-block; text-decoration: none; font-variant: normal; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; content: ""; }
 .section-our-story .icon-instagram:before { font-size: .9em; line-height: 2.4; }
-.section-our-story .contributions-widget { background-color: #fff; border-radius: 8px; box-shadow: 0 0 35px rgba(0, 0, 0, 0.1); padding: 40px; }
-.section-our-story .contributions-widget p { font-size: .85em; font-weight: 400; margin-bottom: .5em; }
+.section-our-story .contributions-widget { background-color: #fff; border-radius: 8px; box-shadow: 0 0 35px rgba(0, 0, 0, 0.1); padding: 30px 40px; }
+.section-our-story .contributions-widget p { font-size: .75em; font-weight: 400; margin-bottom: .5em; }
 .section-our-story .contributions-widget form span { display: inline-block; width: 100%; border-bottom: solid 1px #850f17; color: #850f17; font-size: 1.3em; margin: .25em 0 .4em; }
 .section-our-story .contributions-widget form input[type=text] { margin: .12em 0 0 .1em; width: 85%; }
 .section-our-story .contributions-widget form button { margin-top: 1.5em; }
-@media screen and (min-width: 750px) and (max-width: 979px) { .section-our-story .contributions-widget { padding: 30px; } }
-@media screen and (max-width: 749px) { .section-our-story .contributions-widget { padding: 20px; margin-top: 2em; } }
+@media screen and (min-width: 750px) and (max-width: 979px) { .section-our-story .contributions-widget { padding: 25px 30px; } }
+@media screen and (max-width: 749px) { .section-our-story .contributions-widget { padding: 15px 20px; margin-top: 2em; }
+  .section-our-story .contributions-widget p { font-size: .9em; } }
 
 .section-events { background: linear-gradient(#650b11, #850f17); color: white; }
 .section-events .content { padding-bottom: 10px; }
@@ -227,11 +228,14 @@ section { position: relative; background-color: #f2f2f2; }
 .section-singers .alumni.expand h3:after { transform: rotate(-180deg); }
 .section-singers .alumni.expand ul { max-height: 1000px; }
 
-.section-footer { background-color: #850f17; color: #fff; font-size: .85em; }
-@media screen and (min-width: 980px) { .section-footer .content { padding: 60px 50px; } }
+.section-footer { background-color: #850f17; color: #fff; font-size: .8em; }
+@media screen and (min-width: 980px) { .section-footer .content { padding: 60px 75px; } }
 
 .contribution-thank-you .thank_you_logo { height: 65px; display: block; margin: 0 0 1em; }
 .contribution-thank-you p { margin-bottom: .5em; }
+.contribution-thank-you p.error_message { display: none; }
 .contribution-thank-you button { margin-top: 1em; }
+.contribution-thank-you.error p { display: none; }
+.contribution-thank-you.error p.error_message { display: block; }
 
 

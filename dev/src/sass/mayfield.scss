@@ -19,6 +19,7 @@
 	position: relative;
 	text-align: center;
 	background-color: hsl(356, 60%, 10%);
+	overflow: hidden;
 	
 	h1 {
 		position: absolute;
@@ -72,6 +73,7 @@
 	.content {
 		@include column_parent;
 		flex-wrap: nowrap;
+		align-items: flex-start;
 		
 		@include viewport(xs, s){
 			display: block;
@@ -126,10 +128,10 @@
 	
 	.contributions-widget { 
 		@include floating-box;
-		padding: gutter(l); 
+		padding: (gutter(l) - 10) gutter(l); 
 		
 		p {
-			font-size: .85em;
+			font-size: .75em;
 			font-weight: 400;
 			margin-bottom: .5em;
 		}
@@ -153,11 +155,15 @@
 		}
 		
 		@include viewport(m){
-			padding: gutter(m);
+			padding: (gutter(m) - 5) gutter(m);
 		}
 		@include viewport(xs, s){
-			padding: gutter(s);
+			padding: (gutter(s) - 5) gutter(s);
 			margin-top: 2em;
+			
+			p {
+				font-size: .9em;
+			}
 		}
 	}
 }
@@ -368,11 +374,11 @@
 .section-footer {
 	background-color: $mayfield-red;
 	color: #fff;
-	font-size: .85em;
+	font-size: .8em;
 	
 	.content {
 		@include viewport(l){
-			padding: get_padding(m, tb) get_padding(m, lr);
+			padding: get_padding(m, tb) get_padding(l, lr);
 		}
 	}
 }
@@ -387,7 +393,19 @@
 	p {
 		margin-bottom: .5em;
 	}
+	p.error_message {
+		display: none;
+	}
 	button {
 		margin-top: 1em;
+	}
+	
+	&.error {
+		p {
+			display: none;
+		}
+		p.error_message {
+			display: block;
+		}
 	}
 }

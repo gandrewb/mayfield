@@ -15,20 +15,30 @@ var main = {
 	
 	
 	
-	ajax: function(url, callback){
-		if(window.XMLHttpRequest){
-			var ajx = new XMLHttpRequest();
-		}else{
-			var ajx = new ActiveXObject("Microsoft.XMLHTTP");
-		}
-		
-		ajx.onreadystatechange = function() {
-			if(ajx.readyState==4 && ajx.status==200){
-				callback(ajx.responseText);
+	ajax: function(options){
+		var ajx, response, params='';
+	
+		if(options.data!==undefined){
+			var ct=0;
+			for(var idx in options.data){
+				ct++;
+				var cha = (ct==1) ? '?': '&';
+				params+= cha+idx+'='+options.data[idx];
 			}
 		}
 		
-		ajx.open("GET", url, true);
+		if(window.XMLHttpRequest){
+			ajx = new XMLHttpRequest();
+		}else{
+			ajx = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		ajx.onreadystatechange = function() {
+			if(ajx.readyState==4 && ajx.status==200){
+				options.done(ajx.responseText);
+			}
+		}
+		
+		ajx.open(options.type, options.url+params, true);
 		ajx.send();
 	},
 	
@@ -93,13 +103,32 @@ var main = {
 		
 		if(window.StripeCheckout) {
 			var handler = StripeCheckout.configure({
-				key: 'pk_test_HySA7ahGkleHdgfsB6AZTdxz',
+				key: 'pk_live_hYroZcHHNXiRs1XMq1dITtaA',
 				image: 'https://mayfieldsingers.org/apple-touch-icon.png',
 				locale: 'auto',
 				token: function(token) {
-					document.querySelector('[data-amount]').innerHTML = donation_amt.value;
-					thank_you.classList.add('visible');
-					main.donationAnalytics('paid', donation_amt.value);
+					
+					var amt = donation_amt.value;
+					
+					main.ajax({
+						url: './scripts/stripe.php',
+						type: 'GET',
+						data: {
+							amount: amt * 100,
+							token: token.id,
+							email: token.email
+						},
+						done: function(response){
+							if(response==='success'){							
+								document.querySelector('[data-amount]').innerHTML = amt;
+								thank_you.classList.add('visible');
+								main.donationAnalytics('paid', donation_amt.value);
+							}
+							else {
+								thank_you.classList.add('visible', 'error');
+							}
+						}
+					});
 				}
 			});
 		
@@ -114,7 +143,7 @@ var main = {
 				e.preventDefault();
 			});
 			
-			thank_you_close.addEventListener('click', function(e) { thank_you.classList.remove('visible'); })
+			thank_you_close.addEventListener('click', function(e) { thank_you.classList.remove('visible', 'error'); })
 				
 			//Close Checkout on page navigation:
 			window.addEventListener('popstate', function() {
@@ -126,16 +155,19 @@ var main = {
 
 
 	load_playlists: function() {
-		this.ajax('../audio/library.xml', function(playlists){
-			
-			var parser = new DOMParser();
-			var xml = parser.parseFromString(playlists,"text/xml");
-			
-			var el = document.getElementById('audio_player');
-			var json = main.xml_to_json(xml);
-			
-			MusicPlayer = new PlayerUI(el, false, json);
-			MusicPlayer.populateLists();
+		this.ajax({
+			url: './audio/library.xml',
+			type: 'GET',
+			done: function(playlists){
+				var parser = new DOMParser();
+				var xml = parser.parseFromString(playlists,"text/xml");
+				
+				var el = document.getElementById('audio_player');
+				var json = main.xml_to_json(xml);
+				
+				MusicPlayer = new PlayerUI(el, false, json);
+				MusicPlayer.populateLists();
+			}
 		});
 	},
 
