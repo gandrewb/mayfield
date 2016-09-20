@@ -18,7 +18,7 @@
 .section-intro {
 	position: relative;
 	text-align: center;
-	background-color: hsl(356, 60%, 10%);
+	background-color: #36070a;
 	overflow: hidden;
 	
 	h1 {
@@ -226,13 +226,9 @@
 	}
 }
 
-.section-portrait {
-	img { max-width: 100%; }
-}
-
 .section-samples {}
 
-.the_singers {
+.portrait {
 	padding-bottom: 46.09%;
 	background-repeat: no-repeat;
 	background-size: 100%;
