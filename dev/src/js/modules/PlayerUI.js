@@ -3,13 +3,14 @@
 
 var Song = require('./Song');
 
-function PlayerUI(parent_el, show_all, playlists) {
+function PlayerUI(parent_el, show_all, data) {
 	this.el = parent_el;
 	this.show_all = show_all;
 	this.list_ul = this.el.querySelector('[data-playlist-container]');
 	this.songs_div = this.el.querySelector('[data-song-container]');
 	
-	this.playlists = playlists;
+	this.audio_folder = data.audio_folder;
+	this.playlists = data.playlists;
 
 	this.cur_list = 0;
 	this.cur_song = [];
@@ -38,26 +39,33 @@ proto.populateLists = function() {
 
 
 proto.populateSongs = function(list_idx) {
-	var ul = document.createElement('ul');
-	ul.classList.add('playlist');
-	ul.setAttribute('data-playlist', list_idx);
+	var div = document.createElement('div');
+	div.classList.add('playlist');
+	div.setAttribute('data-playlist', list_idx);
 	
 	if(this.cur_list===list_idx) {
-		ul.classList.add('selected');
+		div.classList.add('selected');
 	}
 	
-	var song_list = this.playlists[list_idx].songs;
+	var ul = document.createElement('ul');
+	div.appendChild(ul);
+	
+	var playlist = this.playlists[list_idx];
+	var song_list = playlist.songs;
 	
 	for(var x=0, l=song_list.length; x<l; x++) {
 		var song = song_list[x];
 		
-		if(this.show_all || song.show==='true'){
+		if(this.show_all || song.make_public){
 			var li = this._getSongLi(song, x);
 			ul.appendChild(li);
 		}
 	}
 	
-	this.songs_div.appendChild(ul);
+	var extras_div = this._getListExtras(playlist);
+	if(extras_div) { div.appendChild(extras_div); };
+	
+	this.songs_div.appendChild(div);
 };
 
 
@@ -71,7 +79,7 @@ proto._advancePlaylist = function(){
 		
 		var song = this.playlists[this.cur_song[0]].songs[this.cur_song[1]];
 		
-		if(this.show_all || song.show==='true') {
+		if(this.show_all || song.make_public) {
 			return true;
 		} else {
 			return this._advancePlaylist();
@@ -95,6 +103,28 @@ proto._clearClasses = function(selector, classArray) {
 
 
 
+proto._getListExtras = function(list) {
+	var div = null;
+	
+	if(list.program) {
+		console.log('program');
+		div = document.createElement('div');
+		div.setAttribute('class', 'playlist_extras');
+		
+		var a = document.createElement('a');
+		a.setAttribute('href', '/programs/'+list.program);
+		a.setAttribute('class', 'icon-document-blank');
+		
+		var label = document.createTextNode('Program');
+		a.appendChild(label);
+		
+		div.appendChild(a);
+	}
+	return div;
+}
+
+
+
 proto._getListLi = function(list, idx) {
 	var li = document.createElement('li');
 	li.setAttribute('data-playlist-trigger', idx);
@@ -104,7 +134,7 @@ proto._getListLi = function(list, idx) {
 	}
 	
 	var span = document.createElement('span');
-	var txt = document.createTextNode(list.name);
+	var txt = document.createTextNode(list.playlist_name);
 	span.appendChild(txt);
 	li.appendChild(span);
 	
@@ -171,10 +201,12 @@ proto._songAnalytics = function(song_coord, action){
 proto._songBtnClick = function(btn, parent) {
 	var idx = btn.getAttribute('data-song');
 	var progress_bar = btn.querySelector('.progress_bar');
-	var song = parent.playlists[parent.cur_list].songs[idx];
+	var playlist = parent.playlists[parent.cur_list];
+	var song = playlist.songs[idx];
 	
 	if(song.audio === undefined){
-		song.audio = new Song(song.fullpath);
+		var path = this.audio_folder +'/'+ playlist.folder +'/'+ song.filename;
+		song.audio = new Song(path);
 	}
 	
 	if(btn.classList.contains('paused')){ // unpause song

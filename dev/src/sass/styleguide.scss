@@ -1,0 +1,217 @@
+@import 'includes/fonts';
+@import 'includes/settings';
+@import 'includes/responsive';
+@import 'includes/utilities';
+@import 'includes/grid';
+@import 'includes/element-base';
+
+body {
+	background-color: $background-alt;
+}
+::selection {
+	background-color: $mayfield-crimson;
+	color: #fff;
+}
+
+a {
+	color: $mayfield-crimson;
+}
+
+.content {
+	padding: get_padding(l, tb) get_padding(l, lr);
+	max-width: 1200px + (get_padding(l, lr) * 2);
+	
+	@include viewport(m){
+		padding: get_padding(m, tb) get_padding(m, lr);
+	}
+	@include viewport(xs, s){
+		padding: get_padding(s, tb) get_padding(s, lr);
+	}
+}
+
+h1 {
+	margin: -.4em 0 0;
+}
+
+.section-words,
+.section-logos,
+.section-icons {
+	background-color: #eaeaea;
+}
+
+.swatches {
+	@include column_parent;
+	
+	.color_swatch {
+		@include column(1, 3, gutter(l));
+		
+		background-color: white;
+		border-radius: 3px;
+		padding: 1em 1em 1em 2em;
+		
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			width: .75em;
+			border-top-left-radius: 3px;
+			border-bottom-left-radius: 3px;
+		}
+		
+		&.crimson:before {
+			background-color: $mayfield-crimson;
+		}
+		&.red:before {
+			background-color: $mayfield-red;
+		}
+		&.charcoal:before {
+			background-color: $mayfield-charcoal;
+		}
+		
+		@include viewport(m){
+			@include column(1, 3, gutter(m));
+		}
+	}
+	
+	@media screen and (max-width: 767px) {
+		display: block;
+		
+		.color_swatch {
+			margin-bottom: gutter(s);
+		}
+	}
+}
+
+.logos {
+	
+	@include column_parent;
+	
+	.logo {
+		background-color: white;
+		margin-bottom: gutter(l);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 70%;
+		position: relative;
+		
+		&:before {
+			display: block;
+			content: '';
+		}
+		
+		@include viewport(m){
+			margin-bottom: gutter(m);
+		}
+		@include viewport(s, xs){
+			margin-bottom: gutter(s);
+		}
+		
+		a {
+			display: inline-block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			
+			&:hover {
+				@include icon(download, before);
+				
+				&::before {
+					padding: .4em .6em 0 0;
+					position: absolute;
+					top: 0;
+					right: 0;
+					color: rgba(0,0,0,0.3);
+				}
+			}
+		}
+	}
+	.dark_bg {
+		background-color: $mayfield-crimson;
+	}
+	
+	.mark,
+	.vert {
+		@include column(1, 4, gutter(l));
+		
+		&:before {
+			padding-bottom: 100%;
+		}
+		
+		@include viewport(m){
+			@include column(1, 4, gutter(m));
+		}
+		@include viewport(s, xs){
+			@include column(1, 2, gutter(s));
+		}
+	}
+	.horz {
+		@include column(2, 4, gutter(l));
+		background-size: 80%;
+		
+		&:before {
+			padding-bottom: 45%;
+		}
+		
+		@include viewport(m){
+			@include column(1, 2, gutter(m));
+		}
+		@include viewport(s, xs){
+			@include column(2, 2, gutter(s));
+		}
+	}
+	
+	.mark.dark_bg { 
+		background-image: url('../../../imgs/logos/Mayfield_Logo_m_dk.svg');
+	}
+	.vert.dark_bg { 
+		background-image: url('../../../imgs/logos/Mayfield_Logo_v_dk.svg');
+	}
+	.horz.dark_bg { 
+		background-image: url('../../../imgs/logos/Mayfield_Logo_h_dk.svg');
+	}
+	
+	.mark.light_bg { 
+		background-image: url('../../../imgs/logos/Mayfield_Logo_m_wht.svg');
+	}
+	.vert.light_bg { 
+		background-image: url('../../../imgs/logos/Mayfield_Logo_v_wht.svg');
+	}
+	.horz.light_bg { 
+		background-image: url('../../../imgs/logos/Mayfield_Logo_h_wht.svg');
+	}
+	
+	.mark.b_w { 
+		background-image: url('../../../imgs/logos/Mayfield_Logo_m_bw.svg');
+	}
+	.vert.b_w { 
+		background-image: url('../../../imgs/logos/Mayfield_Logo_v_bw.svg');
+	}
+	.horz.b_w { 
+		background-image: url('../../../imgs/logos/Mayfield_Logo_h_bw.svg');
+	}
+	
+	
+}
+
+.icons {
+	$icon-space: 37px;
+	
+	margin: 0 (-1 * $icon-space);
+	
+	@include viewport(s, xs){
+		margin: 0;
+	}
+
+	.icon {
+		display: inline-block;
+		margin: $icon-space;
+		font-size: 24px;
+		width: 35px;
+		text-align: center;
+	}
+}

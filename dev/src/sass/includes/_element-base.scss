@@ -69,7 +69,7 @@ li {
 
 button {
 	-webkit-appearance: none;
-	background-color: $mayfield-red;
+	background-color: $mayfield-crimson;
 	color: white;
 	padding: .5em 1em;
 	font-size: 16px;
@@ -83,7 +83,7 @@ input[type=text] {
 	display: inline-block;
 	font-size: 1em;
 	font-weight: 200;
-	color: $mayfield-red;
+	color: $mayfield-crimson;
 	
 	&:focus {
 		outline: none;
@@ -109,34 +109,20 @@ section {
 	}
 }
 
-.map-link {
-	@include icon(location, before);
-	text-decoration: none;
-	color: #fff;
-	
-	&:hover {
-		text-decoration: underline;
-	}
-	
-	&:before {
-		margin-right: .5em;
-	}
-}
-
 .social-link {
 	display: inline-block;
 	font-size: 1.5em;
 	text-align: center;
-	color: $mayfield-red;
+	color: $mayfield-crimson;
 	width: 2.3em;
 	height: 2.3em;
 	border-radius: 100%;
-	border: solid 2px $mayfield-red;
+	border: solid 2px $mayfield-crimson;
 	margin: .5em .5em 0 0;
 	vertical-align: top;
 	
 	&:hover {
-		background-color: $mayfield-red;
+		background-color: $mayfield-crimson;
 		color: #fff;
 	}
 	&:active {

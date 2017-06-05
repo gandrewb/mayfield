@@ -156,57 +156,15 @@ var main = {
 
 	load_playlists: function() {
 		this.ajax({
-			url: './audio/library.xml',
+			url: '/audio/library.json',
 			type: 'GET',
-			done: function(playlists){
-				var parser = new DOMParser();
-				var xml = parser.parseFromString(playlists,"text/xml");
-				
+			done: function(data){			
 				var el = document.getElementById('audio_player');
-				var json = main.xml_to_json(xml);
 				
-				MusicPlayer = new PlayerUI(el, false, json);
+				MusicPlayer = new PlayerUI(el, false, JSON.parse(data));
 				MusicPlayer.populateLists();
 			}
 		});
-	},
-
-
-
-	xml_to_json: function(xml) {
-		
-		var response = [];
-		
-		var playlists = xml.getElementsByTagName('playlist');
-		
-		for(var x=0, l=playlists.length; x<l; x++) {
-			
-			var crt = playlists[x];
-			
-			var playlist = {
-				name: crt.getAttribute('name'),
-				date: crt.getAttribute('date'),
-				path: crt.getAttribute('folder'),
-				songs: []
-			}
-			
-			var xml_songs = crt.getElementsByTagName('song');
-			
-			for(var i=0, len=xml_songs.length; i<len; i++) {
-				var filename = xml_songs[i].querySelector('filename').childNodes[0].nodeValue
-				
-				playlist.songs.push({
-					show: xml_songs[i].getAttribute('show_in_player'),
-					title: xml_songs[i].querySelector('title').childNodes[0].nodeValue,
-					filename: filename,
-					fullpath: '../audio/' + playlist.path + '/' + filename
-				});
-			}
-			
-			response.push(playlist);
-		}
-		
-		return response;		
 	}
 };
 

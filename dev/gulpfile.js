@@ -1,20 +1,24 @@
 var gulp = require('./gulp')([
     //'imagemin',
     'sass',
-	'js',
-	'production_js'
+	'js_main',
+	'js_main_prod',
+	'js_music',
+	'js_music_prod'
 ]);
 
 
  
 gulp.task('default', [
 	'sass',
-	'js'
+	'js_main',
+	'js_music'
 ]);
 
 
 
 gulp.task('production', [
 	'sass',
-	'production_js'
+	'js_main_prod',
+	'js_music_prod'
 ]);

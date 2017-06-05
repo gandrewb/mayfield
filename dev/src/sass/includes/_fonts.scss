@@ -37,19 +37,31 @@ $icons : (
 	yelp: '\e806',
 	youtube: '\f16a',
 	
+	avatar: '\e817',
 	calendar: '\e811',
+	document: '\f0f6',
+	document_blank: '\e81e',
+	download: '\e81c',
+	grid: '\e819',
+	grid_list: '\e81a',
+	heart: '\e80a',
+	heart_empty: '\e80b',
+	info: '\e81d',
+	link: '\e810',
+	list:  '\e81b',
+	location: '\e80d',
+	location_2: '\e812',
+	mail: '\e809',
+	paperclip: '\e80f',
+	picture: '\e818',
+	search: '\e804',
+	star: '\e80c',
+	video: '\e80e',
+	
 	chevron_left: '\e814',
 	chevron_right: '\e815',
 	chevron_up: '\e816',
 	chevron_down: '\e813',
-	heart: '\e80a',
-	heart_empty: '\e80b',
-	location: '\e80d',
-	location_2: '\e812',
-	mail: '\e809',
-	search: '\e804',
-	star: '\e80c',
-	video: '\e80e',
 	
 	play: '\f00f',
 	pause: '\f00e',
@@ -76,3 +88,44 @@ $icons : (
 		content: map-get($icons, $name);
 	}
 }
+
+.icon-facebook			{ @include icon(facebook, before); }
+.icon-instagram			{ @include icon(instagram, before); }
+.icon-twitter			{ @include icon(twitter, before); }
+.icon-pinterest			{ @include icon(pinterest, before); }
+.icon-soundcloud		{ @include icon(soundcloud, before); }
+.icon-tumblr			{ @include icon(tumblr, before); }
+.icon-vimeo				{ @include icon(vimeo, before); }
+.icon-yelp				{ @include icon(yelp, before); }
+.icon-youtube			{ @include icon(youtube, before); }
+.icon-avatar			{ @include icon(avatar, before); }
+.icon-calendar			{ @include icon(calendar, before); }
+.icon-document			{ @include icon(document, before); }
+.icon-document-blank	{ @include icon(document_blank, before); }
+.icon-download			{ @include icon(download, before); }
+.icon-grid				{ @include icon(grid, before); }
+.icon-grid-list			{ @include icon(grid_list, before); }
+.icon-heart				{ @include icon(heart, before); }
+.icon-heart-empty		{ @include icon(heart_empty, before); }
+.icon-info				{ @include icon(info, before); }
+.icon-link				{ @include icon(link, before); }
+.icon-list				{ @include icon(list, before); }
+.icon-location			{ @include icon(location, before); }
+.icon-location-2		{ @include icon(location_2, before); }
+.icon-mail				{ @include icon(mail, before); }
+.icon-paperclip			{ @include icon(paperclip, before); }
+.icon-picture			{ @include icon(picture, before); }
+.icon-search			{ @include icon(search, before); }
+.icon-star				{ @include icon(star, before); }
+.icon-video				{ @include icon(video, before); }
+.icon-chevron-left		{ @include icon(chevron_left, before); }
+.icon-chevron-right		{ @include icon(chevron_right, before); }
+.icon-chevron-up		{ @include icon(chevron_up, before); }
+.icon-chevron-down		{ @include icon(chevron_down, before); }
+.icon-play				{ @include icon(play, before); }
+.icon-pause				{ @include icon(pause, before); }
+.icon-to-end			{ @include icon(to_end, before); }
+.icon-to-start			{ @include icon(to_start, before); }
+.icon-fast-forward		{ @include icon(fast_forward, before); }
+.icon-rewind			{ @include icon(rewind, before); }
+.icon-stop				{ @include icon(stop, before); }

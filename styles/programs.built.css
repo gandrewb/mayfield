@@ -1,0 +1,63 @@
+@font-face { font-family: 'Lato'; font-style: normal; font-weight: 100; src: local("Lato Hairline"), local("Lato-Hairline"), url(https://fonts.gstatic.com/s/lato/v11/pTzFBqwzDU5_uumHzlVDTevvDin1pK8aKteLpeZ5c0A.woff) format("woff"); }
+@font-face { font-family: 'Lato'; font-style: normal; font-weight: 300; src: local("Lato Light"), local("Lato-Light"), url(https://fonts.gstatic.com/s/lato/v11/7YeX5qGGVrvjpqFsvxNSRALUuEpTyoUstqEm5AMlJo4.woff) format("woff"); }
+@font-face { font-family: 'Lato'; font-style: normal; font-weight: 400; src: local("Lato Regular"), local("Lato-Regular"), url(https://fonts.gstatic.com/s/lato/v11/2V_mouV5odI0UgtVODTOwvesZW2xOQ-xsNqO47m55DA.woff) format("woff"); }
+@font-face { font-family: 'Lato'; font-style: normal; font-weight: 700; src: local("Lato Bold"), local("Lato-Bold"), url(https://fonts.gstatic.com/s/lato/v11/sccV8o9st-AMv7Su44YKKQLUuEpTyoUstqEm5AMlJo4.woff) format("woff"); }
+@font-face { font-family: 'Lato'; font-style: normal; font-weight: 900; src: local("Lato Black"), local("Lato-Black"), url(https://fonts.gstatic.com/s/lato/v11/Ue1lpEind3fdmHHQkRYdowLUuEpTyoUstqEm5AMlJo4.woff) format("woff"); }
+@font-face { font-family: 'Lato'; font-style: italic; font-weight: 100; src: local("Lato Hairline Italic"), local("Lato-HairlineItalic"), url(https://fonts.gstatic.com/s/lato/v11/ltAXVgMneoy-oSOU9NjhfHYhjbSpvc47ee6xR_80Hnw.woff) format("woff"); }
+@font-face { font-family: 'Lato'; font-style: italic; font-weight: 300; src: local("Lato Light Italic"), local("Lato-LightItalic"), url(https://fonts.gstatic.com/s/lato/v11/XNVd6tsqi9wmKNvnh5HNELO3LdcAZYWl9Si6vvxL-qU.woff) format("woff"); }
+@font-face { font-family: 'Lato'; font-style: italic; font-weight: 400; src: local("Lato Italic"), local("Lato-Italic"), url(https://fonts.gstatic.com/s/lato/v11/NdyT62s2uoMQ_OHiZ3MeDevvDin1pK8aKteLpeZ5c0A.woff) format("woff"); }
+@font-face { font-family: 'Lato'; font-style: italic; font-weight: 700; src: local("Lato Bold Italic"), local("Lato-BoldItalic"), url(https://fonts.gstatic.com/s/lato/v11/AcvTq8Q0lyKKNxRlL28Rn7O3LdcAZYWl9Si6vvxL-qU.woff) format("woff"); }
+@font-face { font-family: 'Lato'; font-style: italic; font-weight: 900; src: local("Lato Black Italic"), local("Lato-BlackItalic"), url(https://fonts.gstatic.com/s/lato/v11/81X-1TO5y4aMK2PPy9kFw7O3LdcAZYWl9Si6vvxL-qU.woff) format("woff"); }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { background-color: #eee; -webkit-text-size-adjust: 100%; }
+
+@page { margin-top: .8in; margin-left: .8in; margin-bottom: .8in; margin-right: .8in; }
+body { background-color: #fff; max-width: 8.5in; margin: 0 auto; padding: 1in; font-family: 'Lato'; font-size: 10pt; font-weight: 300; }
+
+@media print { body { padding: .2in; } }
+section { page-break-inside: avoid; }
+
+a { color: #000; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+strong { font-weight: 400; }
+
+.large_body { font-size: 12pt; }
+
+.mayfield_logo { max-width: 3in; margin: -10px 0 40px -5px; }
+
+h1 { font-size: 24pt; font-weight: 900; margin-bottom: .2em; }
+h1 svg { position: relative; width: 18px; height: 18px; margin: 0 .2em 0 .25em; }
+h1 svg circle { cx: 9px; cy: 9px; r: 9px; fill: black; }
+h1 time { display: inline-block; font-size: 73%; }
+
+.song_set { margin-top: 2em; }
+.song_set h2 { font-size: 13pt; font-weight: 700; text-transform: uppercase; letter-spacing: .15em; padding-bottom: .4em; margin-bottom: .75em; border-bottom: solid 1px #444; }
+.song_set .row { display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; }
+.song_set .column_2 { width: 49%; }
+.song_set .column_3 { width: 31.5%; }
+.song_set .lyric_title { margin-bottom: .3em; }
+.song_set .lyrics { margin-bottom: 1.5em; }
+
+.song { margin-bottom: 1em; }
+.song h3 { font-weight: 400; font-size: 13pt; line-height: 1.1; }
+.song h3 span.collection { font-style: italic; font-size: .75em; display: block; margin-bottom: .5em; }
+.song .attributions { margin-top: .1em; }
+.song .performers { margin-top: .3em; font-style: italic; }
+
+.roster { margin-top: 3em; }
+.roster table { border-collapse: collapse; }
+.roster td { vertical-align: top; padding-bottom: .4em; }
+.roster .voice_part { font-weight: 400; padding-right: 1em; }
+
+.additional_info { margin-top: 3em; text-align: center; }
+.additional_info .thanks { margin-bottom: 1em; }
+.additional_info .info_space { margin: 1em 0; }
+
+@media screen and (max-width: 8in) { body { padding: 4em 2em; }
+  svg { top: .025em; } }
+@media screen and (max-width: 5.5in) { .song_set .row { display: block; }
+  .song_set .column_2, .song_set .column_3 { width: 100%; } }
+
+

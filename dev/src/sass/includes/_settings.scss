@@ -1,6 +1,3 @@
-$section-padding-tb: 75px;
-$section-padding-lr: 75px;
-
 $section-padding: (
 	l: (tb: 75px, lr: 75px),
 	m: (tb: 60px, lr: 50px),
@@ -16,8 +13,12 @@ $gutters: (
 $rounded-corners: 10px;
 
 $background-alt: #f2f2f2;
-$mayfield-red: hsl(356, 80%, 29%);
 $darker-red:   hsl(356, 80%, 22%);
+
+$mayfield-crimson:  hsl(356, 80%, 29%);
+$mayfield-red:      hsl(0, 65%, 57%);
+$mayfield-charcoal: hsl(0, 0%, 20%);
+
 
 
 $s-start: 550px;

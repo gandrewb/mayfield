@@ -21,15 +21,21 @@
 			white-space: nowrap;
 			text-overflow: ellipsis;
 			overflow: hidden;
+			line-height: 1.2;
+			margin-bottom: -.15em;
+		}
+		
+		&:hover:after {
+			color: #000;
 		}
 		
 		&.selected,
 		&.playing {
-			color: $mayfield-red;
+			color: $mayfield-crimson;
 			font-weight: 400;
 			
 			&:after {
-				color: $mayfield-red;
+				color: $mayfield-crimson;
 			}
 		}
 			
@@ -65,16 +71,14 @@
 	
 	.playlists {
 		border-right: solid 1px $divider-color;
-		background: 
-			url("../imgs/logos/Mayfield_Mark_wht.svg") center 95%/30% no-repeat,
-			rgba(133, 15, 23, 0.03);
+		background-color: rgba(133, 15, 23, 0.03);
 		
 		li {
 			@include icon(chevron_right, after);
 		}
 		
 		@include viewport(xs, s){
-			background: $mayfield-red;
+			background: $mayfield-crimson;
 			border-right: none;
 			white-space: nowrap;
 			overflow: scroll;
@@ -132,6 +136,10 @@
 						}
 					} 
 				}
+				
+				.playlist_extras {
+					animation: fade-up .5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+				}
 			}
 			&:first-of-type {
 				margin-left: 0;
@@ -144,7 +152,7 @@
 
 			&:after {
 				font-size: .75em;
-				line-height: 2.1;
+				line-height: 2.2;
 			}
 			
 			.progress_bar {
@@ -153,7 +161,7 @@
 				bottom: 0;
 				left: 0;
 				height: 3px;
-				background-color: $mayfield-red;
+				background-color: $mayfield-crimson;
 			}
 			
 			&.playing {
@@ -165,6 +173,27 @@
 				
 				.progress_bar {
 					display: block;
+				}
+			}
+		}
+		
+		.playlist_extras {
+			border-top: solid 1px $divider-color;
+			background-color: rgba(133, 15, 23, 0.03);
+			padding: 1.5em 0 1.5em;
+			text-align: center;
+			font-size: .75em;
+			
+			a {
+				text-decoration: none;
+				display: inline-block;
+				color: $mayfield-crimson;
+				font-weight: 400;
+				
+				&:before {
+					font-size: 2em;
+					display: block;
+					line-height: 1.2;
 				}
 			}
 		}
@@ -189,5 +218,15 @@
 		transform: scale(.8);
 		opacity: 0;
 	}
-	
+}
+
+@keyframes fade-up {
+	0% {
+		transform: translateY(1em);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }

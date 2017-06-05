@@ -99,27 +99,18 @@
 	}
 	
 	.icon-twitter {
-		@include icon(twitter, before);
-		
 		&:before {
 			font-size: .9em;
 			line-height: 2.4;
 		}
 	}
-	.icon-facebook {
-		@include icon(facebook, before);
-	}
 	.icon-soundcloud { 
-		@include icon(soundcloud, before);
-		
 		&:before {
 			font-size: 1.1em;
 			line-height: 1.8;
 		}
 	}
 	.icon-instagram { 
-		@include icon(instagram, before);
-		
 		&:before {
 			font-size: .9em;
 			line-height: 2.4;
@@ -140,8 +131,8 @@
 			span {
 				display: inline-block;
 				width: 100%;
-				border-bottom: solid 1px $mayfield-red;
-				color: $mayfield-red;
+				border-bottom: solid 1px $mayfield-crimson;
+				color: $mayfield-crimson;
 				font-size: 1.3em;
 				margin: .25em 0 .4em;
 			}
@@ -169,7 +160,7 @@
 }
 
 .section-events {
-	background: linear-gradient($darker-red, $mayfield-red);
+	background: linear-gradient($darker-red, $mayfield-crimson);
 	color: white;
 	
 	.content {
@@ -209,6 +200,27 @@
 		margin-bottom: 65px;
 		padding: 0 gutter(l) 1.25em 0;
 		
+		
+		
+		// ••••••••••
+		//TEMPORARY TO BE REMOVED ONCE SPRING 2017 CONCERTS ARE REMOVED
+		// ••••••••••
+		@media screen and (max-width:1196px) {
+			@include column(1, 2, gutter(m));
+			padding-right: gutter(m);
+			
+			&.hide-on-medium {
+				display: none;
+			}
+		}
+		// ••••••••••
+		//END TEMPORARY
+		// ••••••••••
+		
+		
+		
+		
+		
 		@include viewport(m){
 			@include column(1, 2, gutter(m));
 			padding-right: gutter(m);
@@ -218,10 +230,37 @@
 			padding-right: gutter(s);
 		}
 		
+		a {
+			text-decoration: none;
+			color: #fff;
+			
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		
 		.map-link {
+			@include icon(location, before);
 			position: absolute;
 			left: 0;
 			bottom: 0;
+			
+			&:before {
+				margin-right: .5em;
+			}
+		}
+		
+		
+		.program_link a{
+			@include icon(document_blank, after);
+			
+			&:after {
+				display: inline-block;
+				position: relative;
+				top: -.1em;
+				margin-left: .75em;
+				font-size: .8em;
+			}
 		}
 	}
 }
@@ -232,16 +271,16 @@
 	padding-bottom: 46.09%;
 	background-repeat: no-repeat;
 	background-size: 100%;
-	background-image: url('/imgs/mayfield_singers_portrait_Dec2015_l.jpg');
+	background-image: url('/imgs/portraits/mayfield_singers_portrait_Dec2016_l.jpg');
 	
 	@include viewport(m){
-		background-image: url('/imgs/mayfield_singers_portrait_Dec2015_m.jpg');
+		background-image: url('/imgs/portraits/mayfield_singers_portrait_Dec2016_m.jpg');
 	}
 	@include viewport(s){
-		background-image: url('/imgs/mayfield_singers_portrait_Dec2015_s.jpg');
+		background-image: url('/imgs/portraits/mayfield_singers_portrait_Dec2016_s.jpg');
 	}
 	@include viewport(xs){
-		background-image: url('/imgs/mayfield_singers_portrait_Dec2015_xs.jpg');
+		background-image: url('/imgs/portraits/mayfield_singers_portrait_Dec2016_xs.jpg');
 	}
 }
 
@@ -325,7 +364,7 @@
 			padding: 0;
 			overflow: hidden;
 			max-height: 0px;
-			border-top: solid 1px $mayfield-red;
+			border-top: solid 1px $mayfield-crimson;
 			padding: 0;
 			transition: .5s max-height ease-out;
 			
@@ -368,13 +407,30 @@
 }
 
 .section-footer {
-	background-color: $mayfield-red;
+	background-color: $mayfield-crimson;
 	color: #fff;
 	font-size: .8em;
 	
 	.content {
 		@include viewport(l){
 			padding: get_padding(m, tb) get_padding(l, lr);
+		}
+	}
+	
+	a {
+		float: right;
+		color: white;
+	
+		&:hover {
+			color: $mayfield-red;
+		}
+	}
+	
+	@include viewport(s, xs){
+		a {
+			float: none;
+			display: block;
+			margin: .5em 0 0;
 		}
 	}
 }

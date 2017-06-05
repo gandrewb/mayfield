@@ -3,6 +3,274 @@
 <playlists>
 	
 	
+	<playlist name="2017 Spring Concert" date="2017-04-08" folder="2017_spring" program="2017_spring">
+		
+		<song show_in_player="true">
+			<title>Laudate Nomen</title>
+			<filename>laudate_nomen.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Hallelujah, Amen</title>
+			<filename>hallelujah_amen.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Alleluia</title>
+			<filename>alleluia.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>It Was a Lover and His Lass</title>
+			<filename>it_was_a_lover_and_his_lass.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Il est bel et bon</title>
+			<filename>il_est_bel_et_bon.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Welcome to May</title>
+			<filename>welcome_to_may.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>My Heavenly Father Loves Me</title>
+			<filename>my_heavenly_father_loves_me.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>I Love the Lord</title>
+			<filename>i_love_the_lord.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>I Can Tell the World</title>
+			<filename>i_can_tell_the_world.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Didnʼt My Lord Deliver Daniel</title>
+			<filename>didnt_my_lord_deliver_daniel.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Fascinating Rhythm</title>
+			<filename>fascinating_rhythm.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Over the Rainbow</title>
+			<filename>over_the_rainbow.mp3</filename>
+		</song>
+
+		<song show_in_player="true">
+			<title>With a Lily in Your Hand</title>
+			<filename>with_a_lily_in_your_hand.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>How Can I Keep from Singing</title>
+			<filename>how_can_i_keep_from_singing.mp3</filename>
+		</song>
+		
+		<song show_in_player="false">
+			<title>I Stand All Amazed</title>
+			<filename>i_stand_all_amazed.mp3</filename>
+		</song>
+		
+	</playlist>
+	
+	
+	
+	<playlist name="2016 Christmas Concert" date="" folder="2016_christmas" program="2016_christmas">
+		
+		<song show_in_player="false">
+			<title>Corde natus ex parentis</title>
+			<filename>corde_natus_ex_parentis.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Hark! (in 7/8)</title>
+			<filename>hark.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Gabriel's Message</title>
+			<filename>gabriels_message.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>While Shepherds Watched</title>
+			<filename>while_shepherds_watched.mp3</filename>
+		</song>
+		
+		<song show_in_player="false">
+			<title>If I But Had a Little Coat</title>
+			<filename>if_i_but_had_a_lIttle_coat.mp3</filename>
+		</song>
+		
+		<song show_in_player="false">
+			<title>In the Bleak Midwinter</title>
+			<filename>in_the_bleak_midwinter.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Whence Is That Goodly Fragrance</title>
+			<filename>whence_is_that_goodly_fragrance.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Il est né le divin enfant</title>
+			<filename>il_est_ne_le_divin_enfant.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>What Child Is This?</title>
+			<filename>what_child_is_this.mp3</filename>
+		</song>
+		
+		<song show_in_player="false">
+			<title>O Come, All Ye Faithful</title>
+			<filename>o_come_all_ye_faithful.mp3</filename>
+		</song>
+		
+		<song show_in_player="false">
+			<title>Some Children See Him</title>
+			<filename>some_children_see_him.mp3</filename>
+		</song>
+		
+		<song show_in_player="false">
+			<title>It Came upon the Midnight Clear</title>
+			<filename>it_came_upon_a_midnight_clear.mp3</filename>
+		</song>
+
+		<song show_in_player="true">
+			<title>O magnum mysterium</title>
+			<filename>o_magnum_mysterium.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Out of the Orient Crystal Skies</title>
+			<filename>out_of_the_orient_crystal_skies.mp3</filename>
+		</song>
+		
+		<song show_in_player="false">
+			<title>Sleigh Ride</title>
+			<filename>sleigh_ride.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Snow</title>
+			<filename>snow.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Christmas Time Is Here</title>
+			<filename>christmas_time.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>little tree</title>
+			<filename>little_tree.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Silent Night</title>
+			<filename>silent_night.mp3</filename>
+		</song>
+		
+	</playlist>
+	
+	
+	
+	<playlist name="2016 Fall Concert" date="" folder="2016_fall" program="2016_fall">
+		
+		<song show_in_player="true">
+			<title>Zionʼs Walls</title>
+			<filename>zions_walls.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>At the River</title>
+			<filename>at_the_river.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Ching-A-Ring-Chaw</title>
+			<filename>ching_a_ring_chaw.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>I Believe This Is Jesus</title>
+			<filename>i_believe_this_is_jesus.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Even When He Is Silent</title>
+			<filename>even_when_he_is_silent.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>The Rune of Hospitality</title>
+			<filename>the_rune_of_hospitality.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Simple Gifts</title>
+			<filename>simple_gifts.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Love Is Little</title>
+			<filename>love_is_little.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Not One Sparrow Is Forgotten</title>
+			<filename>not_one_sparrow_is_forgotten.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Sure on This Shining Night</title>
+			<filename>sure_on_this_shining_night.mp3</filename>
+		</song>
+		
+		<song show_in_player="false">
+			<title>I Love the Passing Light</title>
+			<filename>i_love_the_passing_light.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>A Girlʼs Garden</title>
+			<filename>a_girls_garden.mp3</filename>
+		</song>
+
+		<song show_in_player="true">
+			<title>Iʼm Gonna Sing ‘Til the Spirit Moves in My Heart</title>
+			<filename>im_gonna_sing_til_the_spirit_moves_in_my_heart.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Lord, I Want to Be a Christian</title>
+			<filename>lord_i_want_to_be_a_christian.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>The Battle of Jericho</title>
+			<filename>the_battle_of_jericho.mp3</filename>
+		</song>
+		
+		<song show_in_player="true">
+			<title>Irish Blessing</title>
+			<filename>irish_blessing.mp3</filename>
+		</song>
+		
+	</playlist>
+	
+	
+	
 	<playlist name="2016 Spring Concert" date="" folder="2016_spring">
 		
 		<song show_in_player="true">
@@ -82,7 +350,7 @@
 		</song>
 		
 		<song show_in_player="true">
-			<title>Once in Royal David's City</title>
+			<title>Once in Royal Davidʼs City</title>
 			<filename>once_in_royal_davids_city.mp3</filename>
 		</song>
 		
@@ -198,7 +466,7 @@
 		</song>
 		
 		<song show_in_player="true">
-			<title>Frostiana — A Girl's Garden</title>
+			<title>Frostiana — A Girlʼs Garden</title>
 			<filename>frostiana_a_girls_garden.mp3</filename>
 		</song>
 		
@@ -222,18 +490,18 @@
 			<filename>shenandoah.mp3</filename>
 		</song>
 		
-		<song show_in_player="true">
+		<song show_in_player="false">
 			<title>The Battle of Jericho</title>
 			<filename>the_battle_of_jericho.mp3</filename>
 		</song>
 		
-		<song show_in_player="true">
-			<title>Zion's Walls</title>
+		<song show_in_player="false">
+			<title>Zionʼs Walls</title>
 			<filename>zions_walls.mp3</filename>
 		</song>
 		
 		<song show_in_player="true">
-			<title>We'll Shout and Give Him Glory</title>
+			<title>Weʼll Shout and Give Him Glory</title>
 			<filename>well_shoud_and_give_him_glory.mp3</filename>
 		</song>
 		

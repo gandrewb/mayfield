@@ -1,0 +1,531 @@
+{ 
+"audio_folder": "../audio",
+"playlists": [{ 
+	"playlist_name": "2017 Spring Concert",
+	"date": "2017-04-08",
+	"folder": "2017_spring",
+	"program": "2017_spring.html",
+	"photo": "",
+	"songs": [
+		{
+			"title": "Laudate Nomen",
+			"filename": "laudate_nomen.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Hallelujah, Amen",
+			"filename": "hallelujah_amen.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Alleluia",
+			"filename": "alleluia.mp3",
+			"make_public": true
+		},
+		{
+			"title": "It Was a Lover and His Lass",
+			"filename": "it_was_a_lover_and_his_lass.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Il est bel et bon",
+			"filename": "il_est_bel_et_bon.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Welcome to May",
+			"filename": "welcome_to_may.mp3",
+			"make_public": true
+		},
+		{
+			"title": "My Heavenly Father Loves Me",
+			"filename": "my_heavenly_father_loves_me.mp3",
+			"make_public": true
+		},
+		{
+			"title": "I Love the Lord",
+			"filename": "i_love_the_lord.mp3",
+			"make_public": true
+		},
+		{
+			"title": "I Can Tell the World",
+			"filename": "i_can_tell_the_world.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Didnʼt My Lord Deliver Daniel",
+			"filename": "didnt_my_lord_deliver_daniel.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Fascinating Rhythm",
+			"filename": "fascinating_rhythm.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Over the Rainbow",
+			"filename": "over_the_rainbow.mp3",
+			"make_public": true
+		},
+		{
+			"title": "With a Lily in Your Hand",
+			"filename": "with_a_lily_in_your_hand.mp3",
+			"make_public": true
+		},
+		{
+			"title": "How Can I Keep from Singing",
+			"filename": "how_can_i_keep_from_singing.mp3",
+			"make_public": true
+		},
+		{
+			"title": "I Stand All Amazed",
+			"filename": "i_stand_all_amazed.mp3",
+			"make_public": false
+		}
+	]},
+
+	{
+	"playlist_name": "2016 Christmas Concert",
+	"date": "2016-12-17",
+	"folder": "2016_christmas",
+	"program": "2016_christmas.html",
+	"photo": "",
+	"songs": [
+		{
+			"title": "Corde natus ex parentis",
+			"filename": "corde_natus_ex_parentis.mp3",
+			"make_public": false
+		},
+		{
+			"title": "Hark! (in 7/8)",
+			"filename": "hark.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Gabriel's Message",
+			"filename": "gabriels_message.mp3",
+			"make_public": true
+		},
+		{
+			"title": "While Shepherds Watched",
+			"filename": "while_shepherds_watched.mp3",
+			"make_public": true
+		},
+		{
+			"title": "If I But Had a Little Coat",
+			"filename": "if_i_but_had_a_lIttle_coat.mp3",
+			"make_public": false
+		},
+		{
+			"title": "In the Bleak Midwinter",
+			"filename": "in_the_bleak_midwinter.mp3",
+			"make_public": false
+		},
+		{
+			"title": "Whence Is That Goodly Fragrance",
+			"filename": "whence_is_that_goodly_fragrance.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Il est né le divin enfant",
+			"filename": "il_est_ne_le_divin_enfant.mp3",
+			"make_public": true
+		},
+		{
+			"title": "What Child Is This?",
+			"filename": "what_child_is_this.mp3",
+			"make_public": true
+		},
+		{
+			"title": "O Come, All Ye Faithful",
+			"filename": "o_come_all_ye_faithful.mp3",
+			"make_public": false
+		},
+		{
+			"title": "Some Children See Him",
+			"filename": "some_children_see_him.mp3",
+			"make_public": false
+		},
+		{
+			"title": "It Came upon the Midnight Clear",
+			"filename": "it_came_upon_a_midnight_clear.mp3",
+			"make_public": false
+		},
+		{
+			"title": "O magnum mysterium",
+			"filename": "o_magnum_mysterium.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Out of the Orient Crystal Skies",
+			"filename": "out_of_the_orient_crystal_skies.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Sleigh Ride",
+			"filename": "sleigh_ride.mp3",
+			"make_public": false
+		},
+		{
+			"title": "Snow",
+			"filename": "snow.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Christmas Time Is Here",
+			"filename": "christmas_time.mp3",
+			"make_public": true
+		},
+		{
+			"title": "little tree",
+			"filename": "little_tree.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Silent Night",
+			"filename": "silent_night.mp3",
+			"make_public": true
+		}
+	]},
+
+	{
+	"playlist_name": "2016 Fall Concert",
+	"date": "2016-10-09",
+	"folder": "2016_fall",
+	"program": "2016_fall.html",
+	"photo": "",
+	"songs": [
+		{
+			"title": "Zionʼs Walls",
+			"filename": "zions_walls.mp3",
+			"make_public": true
+		},
+		{
+			"title": "At the River",
+			"filename": "at_the_river.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Ching-A-Ring-Chaw",
+			"filename": "ching_a_ring_chaw.mp3",
+			"make_public": true
+		},
+		{
+			"title": "I Believe This Is Jesus",
+			"filename": "i_believe_this_is_jesus.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Even When He Is Silent",
+			"filename": "even_when_he_is_silent.mp3",
+			"make_public": true
+		},
+		{
+			"title": "The Rune of Hospitality",
+			"filename": "the_rune_of_hospitality.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Simple Gifts",
+			"filename": "simple_gifts.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Love Is Little",
+			"filename": "love_is_little.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Not One Sparrow Is Forgotten",
+			"filename": "not_one_sparrow_is_forgotten.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Sure on This Shining Night",
+			"filename": "sure_on_this_shining_night.mp3",
+			"make_public": true
+		},
+		{
+			"title": "I Love the Passing Light",
+			"filename": "i_love_the_passing_light.mp3",
+			"make_public": false
+		},
+		{
+			"title": "A Girlʼs Garden",
+			"filename": "a_girls_garden.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Iʼm Gonna Sing ‘Til the Spirit Moves in My Heart",
+			"filename": "im_gonna_sing_til_the_spirit_moves_in_my_heart.mp3",
+			"make_public": true
+		},
+		{ 
+			"title": "Lord, I Want to Be a Christian",
+			"filename": "lord_i_want_to_be_a_christian.mp3",
+			"make_public": true
+		},
+		{
+			"title": "The Battle of Jericho",
+			"filename": "the_battle_of_jericho.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Irish Blessing",
+			"filename": "irish_blessing.mp3",
+			"make_public": true
+		}
+	]},
+
+	{
+	"playlist_name": "2016 Spring Concert",
+	"date": "2016-02-13",
+	"folder": "2016_spring",
+	"program": "2016_spring.pdf",
+	"photo": "",
+	"songs": [
+		{
+			"title": "Set Me As a Seal",
+			"filename": "set_me_as_a_seal.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Lida Rose",
+			"filename": "lida_rose.mp3",
+			"make_public": false
+		},
+		{
+			"title": "Meditation",
+			"filename": "meditation.mp3",
+			"make_public": false
+		},
+		{
+			"title": "O mio babbino caro",
+			"filename": "o_mio_babbino_caro.mp3",
+			"make_public": false
+		},
+		{
+			"title": "Sing Me to Heaven",
+			"filename": "sing_me_to_heaven.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Kiss the Girl",
+			"filename": "kiss_the_girl.mp3",
+			"make_public": false
+		},
+		{
+			"title": "Blah, Blah, Blah",
+			"filename": "blah_blah_blah.mp3",
+			"make_public": false
+		},
+		{
+			"title": "When You Are Old and Gray",
+			"filename": "when_you_are_old_and_gray.mp3",
+			"make_public": false
+		},
+		{
+			"title": "Song for the Mira",
+			"filename": "song_for_the_mira.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Shenandoah",
+			"filename": "shenandoah.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Goodnight Moon",
+			"filename": "goodnight_moon.mp3",
+			"make_public": false
+		},
+		{
+			"title": "Five Hebrew Love Songs",
+			"filename": "five_hebrew_love_songs.mp3",
+			"make_public": true
+		},
+		{
+			"title": "This Marriage",
+			"filename": "this_marriage.mp3",
+			"make_public": true
+		}
+	]},
+
+	{
+	"playlist_name": "2015 Christmas Concert",
+	"date": "2015-12-13",
+	"folder": "2015_christmas",
+	"program": "2015_christmas.pdf",
+	"photo": "",
+	"songs": 
+		[{
+			"title": "The Holly and the Ivy",
+			"filename": "the_holly_and_the_ivy.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Once in Royal Davidʼs City",
+			"filename": "once_in_royal_davids_city.mp3",
+			"make_public": true
+		},
+		{ 
+			"title": "A Spotless Rose",
+			"filename": "a_spotless_rose.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Veni, Veni, Emmanuel",
+			"filename": "veni_veni_emanuel.mp3",
+			"make_public": true
+		},
+		{
+			"title": "In dulci jubilo",
+			"filename": "in_dulci_jubilo.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Ave Maria",
+			"filename": "ave_maria.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Sing We Now of Christmas",
+			"filename": "sing_we_now_of_christmas.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Still, still, still",
+			"filename": "still_still_still.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Riu, riu, chiu",
+			"filename": "riu_riu_chiu.mp3",
+			"make_public": true
+		},
+		{
+			"title": "What Sweeter Music",
+			"filename": "what_sweeter_music.mp3",
+			"make_public": true
+		},
+		{
+			"title": "This Little Babe",
+			"filename": "this_little_babe.mp3",
+			"make_public": true
+		},
+		{
+			"title": "What Child Is This?",
+			"filename": "what_child_is_this.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Joy to the World",
+			"filename": "joy_to_the_world.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Gesu bambino",
+			"filename": "gesu_bambino.mp3",
+			"make_public": false
+		},
+		{
+			"title": "Go Tell It on the Mountain",
+			"filename": "go_tell_it_on_the_mountain.mp3",
+			"make_public": true
+		},
+		{ 
+			"title": "It Came upon the Midnight Clear",
+			"filename": "it_came_upon_the_midnight_clear.mp3",
+			"make_public": false
+		},
+		{
+			"title": "Silent Night",
+			"filename": "silent_night.mp3",
+			"make_public": true
+		},
+		{ 
+			"title": "Have Yourself a Merry Little Christmas",
+			"filename": "have_yourself_a_merry_little_christmas.mp3",
+			"make_public": true
+		}
+	]},
+
+	{
+	"playlist_name": "2015 Fall Concert",
+	"date": "",
+	"folder": "2015_fall",
+	"program": "",
+	"photo": "",
+	"songs": 
+		[{
+			"title": "A Prayer of the Middle Ages",
+			"filename": "a_prayer_of_the_middle_ages.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Down to the River to Pray",
+			"filename": "down_to_the_river_to_pray.mp3",
+			"make_public": false
+		},
+		{
+			"title": "Pilgrims Hymn From the Three Hermits",
+			"filename": "pilgrims_hymn_from_the_three_hermits.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Frostiana — The Road Not Taken",
+			"filename": "frostiana_the_road_not_taken.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Frostiana — The Pasture",
+			"filename": "frostiana_the_pasture.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Frostiana — A Girlʼs Garden",
+			"filename": "frostiana_a_girls_garden.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Frostiana — Stopping by the Woods on a Snowy Evening",
+			"filename": "frostiana_stopping_by_the_woods_on_a_snowy_evening.mp3",
+			"make_public": true
+		},
+		{
+			"title": "My Shepherd Will Supply My Need",
+			"filename": "my_shepherd_will_supply_my_need.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Saints Bound for Heaven",
+			"filename": "saints_bound_for_heaven.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Shenandoah",
+			"filename": "shenandoah.mp3",
+			"make_public": false
+		},
+		{
+			"title": "The Battle of Jericho",
+			"filename": "the_battle_of_jericho.mp3",
+			"make_public": false
+		},
+		{
+			"title": "Zionʼs Walls",
+			"filename": "zions_walls.mp3",
+			"make_public": false
+		},
+		{
+			"title": "Weʼll Shout and Give Him Glory",
+			"filename": "well_shoud_and_give_him_glory.mp3",
+			"make_public": true
+		},
+		{
+			"title": "Let Me Fly",
+			"filename": "let_me_fly.mp3",
+			"make_public": true
+		}
+	]}
+]}

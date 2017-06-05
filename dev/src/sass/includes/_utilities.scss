@@ -6,8 +6,20 @@
 	@return map-get($gutters, $vp);
 }
 
-@include viewport(xs){
+@include viewport(m){
+	.hide-on-medium {
+		display: none;
+	}
+}
+
+@include viewport(s){
 	.hide-on-small {
+		display: none;
+	}
+}
+
+@include viewport(xs){
+	.hide-on-xsmall {
 		display: none;
 	}
 }
